@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.0.2",
     "@rebass/components": "^4.0.0-1",
     "@types/jest": "24.0.13",
     "@types/node": "12.0.5",
@@ -11,6 +12,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
+    "rebass": "^3.1.1",
     "styled-components": "^4.3.1",
     "styled-system": "^5.0.5",
     "styled-system-html": "^3.0.0",
@@ -36,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/rebass": "^3.0.4"
   }
 }

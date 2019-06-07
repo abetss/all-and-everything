@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import { materialUiTheme } from './design-system';
+import NoSsr from '@material-ui/core/NoSsr';
+import Box from '@material-ui/core/Box';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function Demo() {
+	return (
+		<NoSsr>
+			<ThemeProvider theme={materialUiTheme}>
+				<Box
+					color="primary.main"
+					bgcolor="background.paper"
+					fontFamily="h6.fontFamily"
+					fontSize={{ xs: 'h6.fontSize', sm: 'h4.fontSize', md: 'h3.fontSize' }}
+					p={{ xs: 2, sm: 3, md: 4 }}
+				>
+					@material-ui/system
+				</Box>
+			</ThemeProvider>
+		</NoSsr>
+	);
 }
-
-export default App;

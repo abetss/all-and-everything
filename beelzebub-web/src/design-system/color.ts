@@ -97,7 +97,6 @@ export const colorPallet = {
 	orange: ['#ff6300']
 };
 
-// TODO: find the theme colors
 // categories inspired by https://material.io/design/color/the-color-system.html#color-theme-creation
 export const colors = {
 	// A primary color is the color displayed most frequently across your app’s screens and components.
