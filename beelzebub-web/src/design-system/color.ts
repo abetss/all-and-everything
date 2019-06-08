@@ -91,8 +91,7 @@ export const colorPallet = {
 	green: [
 		colorSpectrum['dark-green'],
 		colorSpectrum.green,
-		colorSpectrum['light-green'],
-		,
+		colorSpectrum['light-green']
 	],
 	orange: ['#ff6300']
 };
