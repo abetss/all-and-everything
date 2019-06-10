@@ -2,7 +2,6 @@
 	"private": true,
 	"workspaces": [
 		"beelzebub-web",
-		"beelzebub-server",
-		"test-server"
+		"beelzebub-server"
 	]
 }

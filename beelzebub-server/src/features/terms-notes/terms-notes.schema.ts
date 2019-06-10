@@ -11,7 +11,7 @@ export const termsNotesTypeDefs = gql`
 	type TermsConnection {
 		cursor: String!
 		hasMore: Boolean!
-		terms: [Terms!]!
+		list: [Terms!]!
 	}
 
 	type Terms {
@@ -43,7 +43,7 @@ export const termsNotesResolvers = {
 			);
 
 			return {
-				terms: paginatedTerms,
+				list: paginatedTerms,
 				cursor: paginatedTerms.length
 					? paginatedTerms[paginatedTerms.length - 1].cursor
 					: null,
