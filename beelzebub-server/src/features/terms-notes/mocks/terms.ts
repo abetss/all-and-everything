@@ -1,11 +1,11 @@
 const user1 = {
-	id: 'hashid2222',
+	id: '93c166f3-1b20-4b3f-8624-7188a22b8495',
 	firstName: 'Elvis',
 	lastName: 'Tang',
 	email: 'elvis.tang@gmail.com'
 };
 
-export const terms = [
+export const termsMocks = [
 	{ id: 1, title: 'Tango', author: user1 },
 	{ id: 2, title: 'Kilo', author: user1 },
 	{ id: 3, title: 'X-ray', author: user1 },
