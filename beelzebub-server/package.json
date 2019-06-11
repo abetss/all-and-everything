@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"private": false,
 	"scripts": {
-		"start": "ts-node-dev src/index.ts"
+		"start": "ts-node-dev src/index.ts",
+		"schema:push": "npx apollo service:push --endpoint=http://localhost:4000",
+		"schema:validate": "npx apollo service:check"
 	},
 	"devDependencies": {
 		"@types/graphql": "^14.2.0",
