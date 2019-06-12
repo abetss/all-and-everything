@@ -1,29 +1,29 @@
 {
-	"compilerOptions": {
-		"target": "es5",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"noEmit": true,
-		"jsx": "preserve"
-	},
-	"include": ["src"],
-	"paths": {
-		"@material-ui/core": ["./material-ui/src"],
-		"@material-ui/core/*": ["./material-ui/src/*"],
-		"@material-ui/lab": ["./material-ui-lab/src"],
-		"@material-ui/lab/*": ["./material-ui-lab/src/*"],
-		"@material-ui/styles": ["./material-ui-styles/src"],
-		"@material-ui/styles/*": ["./material-ui-styles/src/*"],
-		"@material-ui/system": ["./material-ui-system/src"],
-		"@material-ui/types": ["./material-ui-types"]
-	}
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "include": ["src"],
+  "paths": {
+    "@material-ui/core": ["./material-ui/src"],
+    "@material-ui/core/*": ["./material-ui/src/*"],
+    "@material-ui/lab": ["./material-ui-lab/src"],
+    "@material-ui/lab/*": ["./material-ui-lab/src/*"],
+    "@material-ui/styles": ["./material-ui-styles/src"],
+    "@material-ui/styles/*": ["./material-ui-styles/src/*"],
+    "@material-ui/system": ["./material-ui-system/src"],
+    "@material-ui/types": ["./material-ui-types"]
+  }
 }
