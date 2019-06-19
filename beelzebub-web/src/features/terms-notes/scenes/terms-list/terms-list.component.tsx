@@ -14,18 +14,19 @@ const findStringMatch = (input: string) => (item: any) => {
 const useTerms = (terms: any) => {
   const [allTerms] = useState(terms);
   const [filteredTerms, setFilteredTerms] = useState(allTerms);
+  const [selectedId, setSelectedId] = useState(0);
 
-  const handleClick = useCallback(id => {
+  const handleClick = (id: number) => {
     console.log("id", id);
-    const selectedId = id;
-  }, []);
+    setSelectedId(id);
+  };
 
   const filterList = useCallback((input: string) => {
     const updatedList = allTerms.filter(findStringMatch(input));
     setFilteredTerms(updatedList);
   }, []);
 
-  return [allTerms, filteredTerms, handleClick, filterList];
+  return [allTerms, filteredTerms, handleClick, filterList, selectedId];
 };
 
 export const TermsListComponent = ({ terms }: any) => {
@@ -48,6 +49,7 @@ export const TermsListComponent = ({ terms }: any) => {
       </Grid>
       <Grid item xs={8}>
         <Paper>
+          {selectedId}
           <Notes terms={allTerms} selectedId={selectedId} />
         </Paper>
       </Grid>
