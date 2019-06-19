@@ -11,6 +11,8 @@ const TERMS_QUERY = gql`
       list {
         id
         title
+        note
+        page
       }
     }
   }
