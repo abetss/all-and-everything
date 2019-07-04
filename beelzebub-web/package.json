@@ -1,55 +1,60 @@
 {
-	"name": "beelzebub-web",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@material-ui/core": "^4.0.2",
-		"@rebass/components": "^4.0.0-1",
-		"@types/jest": "24.0.13",
-		"@types/node": "12.0.5",
-		"@types/react": "16.8.19",
-		"@types/react-dom": "16.8.4",
-		"apollo-cache-inmemory": "^1.6.2",
-		"apollo-client": "^2.6.2",
-		"apollo-link-http": "^1.5.14",
-		"react": "^16.8.6",
-		"react-apollo": "^2.5.6",
-		"react-apollo-hooks": "^0.4.5",
-		"react-dom": "^16.8.6",
-		"react-router": "^5.0.1",
-		"react-router-dom": "^5.0.1",
-		"react-scripts": "3.0.1",
-		"styled-components": "^4.3.1",
-		"styled-system": "^5.0.5",
-		"styled-system-html": "^3.0.0",
-		"typescript": "3.5.1"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"schema:download": "apollo client:download-schema ./src/schema.graphql",
-		"schema:gen": "apollo client:codegen src/core/types/schemaTypes.ts --localSchemaFile=./src/schema.json --outputFlat --target=typescript "
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@types/react-router-dom": "^4.3.3",
-		"@types/styled-components": "^4.1.16",
-		"apollo": "^2.13.0"
-	}
+  "name": "beelzebub-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.0.2",
+    "@rebass/components": "^4.0.0-1",
+    "@types/jest": "24.0.13",
+    "@types/node": "12.0.5",
+    "@types/react": "16.8.19",
+    "@types/react-dom": "16.8.4",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.2",
+    "apollo-link-http": "^1.5.14",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.6",
+    "react-apollo-hooks": "^0.4.5",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "styled-components": "^4.3.1",
+    "styled-system": "^5.0.5",
+    "styled-system-html": "^3.0.0",
+    "typescript": "3.5.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "schema:download": "apollo client:download-schema ./src/schema.graphql",
+    "schema:gen": "apollo client:codegen src/core/types/schemaTypes.ts --localSchemaFile=./src/schema.json --outputFlat --target=typescript ",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "prettier-opts": "prettier --write --parser typescript --single-quote",
+    "prettier": "yarn prettier-opts \"./src/**/*.{ts,tsx}\"",
+    "prepush": "yarn lint && yarn test -- --coverage --bail"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^4.3.3",
+    "@types/styled-components": "^4.1.16",
+    "apollo": "^2.13.0",
+    "tslint": "^5.18.0"
+  }
 }
