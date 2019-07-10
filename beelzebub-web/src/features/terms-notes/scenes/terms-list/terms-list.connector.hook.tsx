@@ -1,7 +1,7 @@
-import React from "react";
-import { useQuery } from "react-apollo-hooks";
-import gql from "graphql-tag";
-import { TermsListComponent } from "./terms-list.component";
+import React from 'react';
+import { useQuery } from 'react-apollo-hooks';
+import gql from 'graphql-tag';
+import { TermsListComponent } from './terms-list.component';
 
 const TERMS_QUERY = gql`
   query getTerms($pageSize: Int, $after: String) {
@@ -28,7 +28,7 @@ export const TermsListConnectorWithHook = () => {
   }
 
   const {
-    terms: { list }
+    terms: { list },
   } = data;
 
   return <TermsListComponent terms={list} />;
