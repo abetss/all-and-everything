@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server';
-import { termsMocks as allTerms } from './mocks/terms';
 import { paginateResults } from '../../core/utils';
 import { Term } from './terms-notes.types';
 
@@ -14,10 +13,16 @@ export const termsNotesTypeDefs = gql`
 		list: [Terms!]!
 	}
 
+	type Note {
+		text: String
+	}
+
 	type Terms {
 		id: ID!
 		title: String
 		author: User
+		notes: [Note]!
+		pages: [Int]!
 	}
 `;
 

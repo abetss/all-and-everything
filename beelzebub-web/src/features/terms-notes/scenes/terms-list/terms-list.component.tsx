@@ -7,6 +7,8 @@ import { TermsSearch, TermsList } from './components';
 export const TermsListComponent = ({ terms }: any) => {
   const [allTerms, filteredTerms, handleClick, filterList, selectedId] = useTerms(terms);
 
+  // todo: Notes should get the array of notes instead of the term id
+
   return (
     <Flex>
       <Card width={1 / 4} border={1} borderColor="surface">
