@@ -23,6 +23,7 @@ export const termsNotesTypeDefs = gql`
 		author: User
 		notes: [Note]!
 		pages: [Int]!
+		tags: [String!]!
 	}
 `;
 
