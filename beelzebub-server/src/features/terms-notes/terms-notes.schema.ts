@@ -5,19 +5,21 @@ import { Term } from './terms-notes.types';
 export const termsNotesTypeDefs = gql`
 	extend type Query {
 		terms(pageSize: Int, after: String): TermsConnection!
+		term(id: Int): Term!
 	}
 
 	type TermsConnection {
 		cursor: String!
 		hasMore: Boolean!
-		list: [Terms!]!
+		list: [Term!]!
 	}
 
 	type Note {
 		text: String
 	}
 
-	type Terms {
+	# TODO: rename Terms to Term
+	type Term {
 		id: ID!
 		title: String
 		author: User
@@ -60,6 +62,14 @@ export const termsNotesResolvers = {
 					  paginableTerms[paginableTerms.length - 1].cursor
 					: false
 			};
+		},
+		term: async (
+			_: any,
+			{ id }: any,
+			{ dataSources: { databaseApi } }: any
+		) => {
+			const term: Term = await databaseApi.findTerm(id);
+			return term;
 		}
 	}
 };

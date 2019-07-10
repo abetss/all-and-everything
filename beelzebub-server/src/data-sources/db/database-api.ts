@@ -24,4 +24,9 @@ export class DatabaseAPI extends DataSource {
 		const allTerms: Term[] = await this.store.terms.findAll();
 		return allTerms;
 	}
+
+	async findTerm(id: number): Promise<Term> {
+		const term: Term = await this.store.terms.findById(id);
+		return term;
+	}
 }

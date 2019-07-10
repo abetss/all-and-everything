@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Paper, Grid } from '@material-ui/core';
-import { termsMocks } from '.';
+import { termsMocks } from '../terms-list';
 import { TermsList, TermsSearch } from './components';
 
 interface terms {

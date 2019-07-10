@@ -11,16 +11,12 @@ const TERMS_QUERY = gql`
       list {
         id
         title
-        notes {
-          text
-        }
-        pages
       }
     }
   }
 `;
 
-export const TermsListConnectorWithHook = () => {
+export const TermsListWidget = () => {
   const { data, error, loading } = useQuery(TERMS_QUERY);
   if (loading) {
     return <div>Loading...</div>;
