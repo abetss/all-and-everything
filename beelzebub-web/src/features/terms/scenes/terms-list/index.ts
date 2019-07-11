@@ -1,5 +1,4 @@
-export * from './terms-list.connector';
-export * from './terms-list.connector.hook';
+export * from './terms-list.widget';
 
 const user1 = {
   id: '93c166f3-1b20-4b3f-8624-7188a22b8495',

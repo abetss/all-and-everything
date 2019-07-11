@@ -1,1 +1,1 @@
-export * from './terms-notes/scenes';
+export * from './terms/scenes';
