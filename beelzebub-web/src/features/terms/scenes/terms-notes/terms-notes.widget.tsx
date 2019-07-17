@@ -21,6 +21,7 @@ const FIND_TERM_QUERY = gql`
 `;
 
 export const TermsNotesWidget = ({ id }: TermsNotesWidgetProps ) => {
+  console.log('id', id)
   const { data, error, loading } = useQuery(FIND_TERM_QUERY, {
     variables: { id },
   });

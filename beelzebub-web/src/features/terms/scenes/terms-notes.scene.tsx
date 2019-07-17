@@ -12,7 +12,7 @@ export const TermsNotesScene = () => {
         <TermsListWidget />
       </Box>
       <Box width={3 / 4}>
-        <TermsNotesWidget id={termId} />
+        { termId && <TermsNotesWidget id={termId} /> }
       </Box>
     </Flex>
   );
