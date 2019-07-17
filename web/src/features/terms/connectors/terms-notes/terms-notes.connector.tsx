@@ -3,7 +3,7 @@ import { Heading, Card, Flex, Box, Text } from 'rebass';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
 
-interface TermsNotesWidgetProps {
+interface TermsNotesConnectorProps {
   id?: any
 }
 
@@ -20,7 +20,7 @@ const FIND_TERM_QUERY = gql`
   }
 `;
 
-export const TermsNotesWidget = ({ id }: TermsNotesWidgetProps ) => {
+export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps ) => {
   console.log('id', id)
   const { data, error, loading } = useQuery(FIND_TERM_QUERY, {
     variables: { id },

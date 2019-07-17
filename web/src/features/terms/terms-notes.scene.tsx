@@ -1,8 +1,8 @@
 import React from 'react';
 import { Flex, Box } from 'rebass';
-import { TermsNotesWidget } from './terms-notes/';
-import { TermsListWidget } from './terms-list';
-import { useTermQueryParam } from '../utils';
+import { TermsNotesConnector } from './connectors/terms-notes';
+import { TermsListWidget } from './connectors/terms-list';
+import { useTermQueryParam } from './utils';
 
 export const TermsNotesScene = () => {
   const [ termId ] = useTermQueryParam()
@@ -12,7 +12,7 @@ export const TermsNotesScene = () => {
         <TermsListWidget />
       </Box>
       <Box width={3 / 4}>
-        { termId && <TermsNotesWidget id={termId} /> }
+        { termId && <TermsNotesConnector id={termId} /> }
       </Box>
     </Flex>
   );
