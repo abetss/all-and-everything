@@ -3,11 +3,10 @@ import { TextField } from '@material-ui/core';
 import { Box } from 'rebass';
 
 interface TermsSearchProps {
-  terms: Array<any>;
   onChange: (filterText: string) => void;
 }
 
-export const TermsSearch = ({ terms, onChange }: TermsSearchProps) => (
+export const TermsSearch = ({ onChange }: TermsSearchProps) => (
   <Box px={3} pb={3}>
     <form noValidate autoComplete="on">
       <TextField

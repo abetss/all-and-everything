@@ -21,7 +21,6 @@ const FIND_TERM_QUERY = gql`
 `;
 
 export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps ) => {
-  console.log('id', id)
   const { data, error, loading } = useQuery(FIND_TERM_QUERY, {
     variables: { id },
   });

@@ -38,7 +38,7 @@ export class TermsListConnector extends React.PureComponent<RouteComponentProps<
       <Grid container justify="center" direction="column">
         <Grid item xs={4}>
           <Paper>
-            <TermsSearch terms={terms} onChange={filterList} />
+            <TermsSearch onChange={filterList} />
             <TermsList terms={filteredTerms} onClick={handleClick} />
           </Paper>
         </Grid>
