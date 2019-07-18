@@ -7,11 +7,11 @@ export const TermsListComponent = ({ terms }: any) => {
   const [allTerms, filteredTerms, setTermId, termId, filterList] = useTerms(terms);
   return (
     <Card width={1} border={1} borderColor="surface">
-        <Heading px={3} pt={3}>
-          Terms List
-        </Heading>
-        <TermsSearch onChange={filterList} />
-        <TermsList terms={filteredTerms} onClick={setTermId} />
+      <Heading px={3} pt={3}>
+        Terms List
+      </Heading>
+      <TermsSearch onChange={filterList} />
+      <TermsList terms={filteredTerms} onClick={setTermId} termId={termId} />
     </Card>
   );
 };
