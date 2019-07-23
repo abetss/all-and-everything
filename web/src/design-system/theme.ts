@@ -31,11 +31,11 @@ export const theme = {
   colors,
 
   // global theme for the primitive components that we import from rebass
-  Button: {
-    backgroundColor: colors.primary,
-    color: colors['on-primary'],
-    borderRadius: 4,
-  },
+  // Button: {
+  //   backgroundColor: colors.primary,
+  //   color: colors['on-primary'],
+  //   borderRadius: 4,
+  // },
 
   Text: {
     fontFamily: 'open-sans',
@@ -44,7 +44,8 @@ export const theme = {
   cards: {
     clickable: {
       '&:hover': {
-        backgroundColor: colors['surface'],
+        backgroundColor: colors['primary-light'],
+        color: '#fff',
         cursor: 'pointer',
       },
     },

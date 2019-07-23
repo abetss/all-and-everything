@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text } from 'rebass';
+import { Flex, Button } from 'rebass';
 
 interface TermTagsProps {
   term: any;
@@ -8,7 +8,9 @@ interface TermTagsProps {
 export const TermTags = ({ term }: TermTagsProps) => (
   <Flex mt={2}>
     {term.tags.map((tag: string) => (
-      <Text mr={2}>#{tag}</Text>
+      <Button bg="secondary-variant" mr={2}>
+        {tag}
+      </Button>
     ))}
   </Flex>
 );

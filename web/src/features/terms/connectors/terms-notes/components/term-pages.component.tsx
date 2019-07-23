@@ -7,9 +7,11 @@ interface TermPagesProps {
 
 export const TermPages = ({ term }: TermPagesProps) => (
   <Flex mt={2}>
-    <Text>Pages: </Text>
+    <Text fontSize={3}>Pages: </Text>
     {term.pages.map((page: number) => (
-      <Text ml={2}>{page}</Text>
+      <Text fontSize={3} ml={2}>
+        {page}
+      </Text>
     ))}
   </Flex>
 );

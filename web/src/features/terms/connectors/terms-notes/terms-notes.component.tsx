@@ -10,7 +10,9 @@ interface TermsNotesComponentProps {
 
 export const TermsNotesComponent = ({ term }: TermsNotesComponentProps) => (
   <Box width={1} p={3}>
-    <Heading>{term.title}</Heading>
+    <Heading fontSize={6} color="primary">
+      {term.title}
+    </Heading>
     {term.tags.length > 0 && <TermTags term={term} />}
     {term.pages.length > 0 && <TermPages term={term} />}
     <TermBody term={term} />

@@ -6,11 +6,11 @@ export const ListItem = ({ children, id, onClick, selected }: any) => {
     <Card
       variant="clickable"
       width={1}
-      height="40px"
       borderTop={1}
       borderColor="surface"
       p={3}
-      bg={selected ? 'surface' : ''}
+      bg={selected ? 'primary-light' : ''}
+      color={selected ? '#fff' : ''}
       onClick={() => onClick(id)}
     >
       {children}

@@ -9,10 +9,10 @@ export const TermBody = ({ term }: TermBodyProps) => (
   <Flex flexDirection="column">
     {term.notes.length > 0 && (
       <Box mt={3}>
-        <Text>Notes: </Text>
+        <Text fontSize={3}>Notes: </Text>
         {term.notes.map((note: any) => (
           <Card p={3} my={2} border={1} borderColor="surface">
-            <Text>{note.text}</Text>
+            <Text fontSize={2}>{note.text}</Text>
           </Card>
         ))}
       </Box>

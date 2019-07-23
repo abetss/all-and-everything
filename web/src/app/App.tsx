@@ -1,11 +1,12 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import { theme } from '../design-system';
 import NoSsr from '@material-ui/core/NoSsr';
 import { Routes } from './routes';
 import { createClient } from './apollo';
+import { space, color, fontSize, width, fontWeight, lineHeight } from 'styled-system';
 
 const client = createClient();
 
