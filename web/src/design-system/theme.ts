@@ -45,7 +45,7 @@ export const theme = {
     clickable: {
       '&:hover': {
         backgroundColor: colors['primary-light'],
-        color: '#fff',
+        color: 'on-surface',
         cursor: 'pointer',
       },
     },
