@@ -9,7 +9,7 @@ export const TermPages = ({ term }: TermPagesProps) => (
   <Flex mt={2}>
     <Text fontSize={3}>Pages: </Text>
     {term.pages.map((page: number) => (
-      <Text fontSize={3} ml={2}>
+      <Text fontSize={3} ml={2} key={page}>
         {page}
       </Text>
     ))}

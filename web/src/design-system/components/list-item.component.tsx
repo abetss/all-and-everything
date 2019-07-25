@@ -10,7 +10,7 @@ export const ListItem = ({ children, id, onClick, selected }: any) => {
       borderColor="surface"
       p={3}
       bg={selected ? 'primary-light' : ''}
-      color={selected ? 'on-surface' : ''}
+      color={selected ? 'on-primary' : ''}
       onClick={() => onClick(id)}
     >
       {children}

@@ -11,7 +11,7 @@ export const TermBody = ({ term }: TermBodyProps) => (
       <Box mt={3}>
         <Text fontSize={3}>Notes: </Text>
         {term.notes.map((note: any) => (
-          <Card p={3} my={2} border={1} borderColor="surface">
+          <Card p={3} my={2} border={1} borderColor="surface" key={note.text}>
             <Text fontSize={2}>{note.text}</Text>
           </Card>
         ))}
