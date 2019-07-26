@@ -1,16 +1,16 @@
 import React from 'react';
-import { Heading, Card, Flex, Box, Text } from 'rebass';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
+import { TermsNotesComponent } from './terms-notes.component';
 
 interface TermsNotesConnectorProps {
-  id?: any
+  id?: any;
 }
 
 const FIND_TERM_QUERY = gql`
   query term($id: Int) {
     term(id: $id) {
-      title,
+      title
       notes {
         text
       }
@@ -20,7 +20,7 @@ const FIND_TERM_QUERY = gql`
   }
 `;
 
-export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps ) => {
+export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps) => {
   const { data, error, loading } = useQuery(FIND_TERM_QUERY, {
     variables: { id },
   });
@@ -32,41 +32,7 @@ export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps ) => {
     return <div>Error! {error.message}</div>;
   }
 
-  const {
-    term,
-  } = data;
+  const { term } = data;
 
-  return (
-    <Box width={1} p={3}>
-       <Heading>{term.title}</Heading>
-        { term.tags.length > 0 &&
-          <Flex mt={2} >
-            {
-              term.tags.map((tag: string) => <Text mr={2}>#{tag}</Text>)
-            }
-          </Flex>
-       }
-       { term.pages.length > 0 &&
-          <Flex mt={2}>
-            <Text>Pages: </Text>
-            {
-              term.pages.map((page: number) => <Text ml={2}>{page}</Text>)
-            }
-          </Flex>
-       }
-       { term.notes.length > 0 &&
-          <Box mt={3}>
-            <Text>Notes: </Text>
-            {
-              term.notes.map((note: any) =>
-                <Card p={3} my={2} border={1} borderColor="surface">
-                  <Text>
-                    {note.text}
-                  </Text>
-                </Card>)
-            }
-          </Box>
-       }
-    </Box>
-  );
+  return <TermsNotesComponent term={term} />;
 };
