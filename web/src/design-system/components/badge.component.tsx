@@ -2,14 +2,14 @@ import React from 'react';
 import { Button } from 'rebass';
 import { PrimaryText } from './primary-text.component';
 
-type BargeProps = {
+type BadgeProps = {
   children: string | number;
   bg?: string;
   color?: string;
   onClick?: () => void;
 };
 
-export const Badge = ({ children, onClick, color = 'on-secondary', ...props }: BargeProps) => {
+export const Badge = ({ children, onClick, color = 'on-secondary', ...props }: BadgeProps) => {
   return (
     <Button
       variant={onClick ? 'clickable' : ''}
