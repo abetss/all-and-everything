@@ -80,9 +80,8 @@ export const colorPallet = {
 export const colors = {
   // A primary color is the color displayed most frequently across your app’s screens and components.
   primary: colorSpectrum['dark-blue'],
-  'primary-variant': colorSpectrum.purple,
+  'primary-variant': colorSpectrum.blue,
   'primary-light': colorSpectrum['light-blue'],
-  'primary-lightest': colorSpectrum['lightest-blue'],
   /**
    * A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI.
    * Secondary colors are best for:
@@ -107,7 +106,7 @@ export const colors = {
    * surface color, background color, or error color
    */
   'on-primary': colorSpectrum.white,
-  'on-secondary': colorSpectrum.black,
+  'on-secondary': colorSpectrum.white,
   'on-background': colorSpectrum.black,
   'on-surface': colorSpectrum.black,
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
-import { TermsNotesComponent } from './terms-notes.component';
+import { TermDetail } from './term-detail.component';
 
-interface TermsNotesConnectorProps {
+interface TermDetailConnectorProps {
   id?: any;
 }
 
@@ -20,7 +20,7 @@ const FIND_TERM_QUERY = gql`
   }
 `;
 
-export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps) => {
+export const TermDetailConnector = ({ id }: TermDetailConnectorProps) => {
   const { data, error, loading } = useQuery(FIND_TERM_QUERY, {
     variables: { id },
   });
@@ -34,5 +34,5 @@ export const TermsNotesConnector = ({ id }: TermsNotesConnectorProps) => {
 
   const { term } = data;
 
-  return <TermsNotesComponent term={term} />;
+  return <TermDetail term={term} />;
 };

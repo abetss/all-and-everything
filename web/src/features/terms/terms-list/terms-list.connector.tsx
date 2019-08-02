@@ -16,7 +16,7 @@ const TERMS_QUERY = gql`
   }
 `;
 
-export const TermsListWidget = () => {
+export const TermsListConnector = () => {
   const { data, error, loading } = useQuery(TERMS_QUERY);
   if (loading) {
     return <div>Loading...</div>;
