@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading, Flex, Box, Card } from 'rebass';
+import { TermsCreateTerm, TermsCreatePages } from './terms-create';
 
 export const TermsAddScene = () => (
   <Box width={1}>
@@ -9,17 +10,8 @@ export const TermsAddScene = () => (
       </Heading>
     </Flex>
     <Card>
-      <form>
-        <label>
-          Term Name:
-          <input type="text" name="term" />
-        </label>
-        <label>
-          Pages:
-          <input type="text" name="term" />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <TermsCreateTerm />
+      <TermsCreatePages />
     </Card>
   </Box>
 );
