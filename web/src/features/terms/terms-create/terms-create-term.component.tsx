@@ -3,25 +3,29 @@ import { Card } from 'rebass';
 
 let term: any;
 
-export const TermsCreateTerm = () =>
-  function onChange(newTerm: string): void {
-    term = newTerm;
-  };
-function handleSubmit() {
-  console.log(term);
-  alert('A name was submitted: ' + term);
+function handleChange(newTerm: string): void {
+  term = newTerm;
 }
-<Card p={3}>
-  <form onSubmit={handleSubmit}>
-    <label>
-      Term Name:
-      <input
-        type="text"
-        name="term"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChange(event.target.value)}
-      />
-    </label>
-    <input type="submit" value="Submit" />
-  </form>
-  <h2>{term}</h2>
-</Card>;
+function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  console.log(term);
+}
+
+export const TermsCreateTerm = () => (
+  <Card p={3}>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Term Name:
+        <input
+          type="text"
+          name="term"
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            handleChange(event.target.value)
+          }
+        />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+    <h2>{term}</h2>
+  </Card>
+);
