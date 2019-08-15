@@ -1,2 +1,2 @@
-export * from './terms-create-term.component';
-export * from './terms-create-pages.component';
+export * from './create-term.component';
+export * from './create-page.component';

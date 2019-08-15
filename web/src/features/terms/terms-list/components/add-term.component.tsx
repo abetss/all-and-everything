@@ -2,11 +2,11 @@ import React from 'react';
 import { Button } from 'rebass';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-interface TermsAddProps {
-  to?: any;
+interface AddTermProps {
+  to?: string;
 }
 
-export const TermsAdd = ({ to }: TermsAddProps) => (
+export const AddTerm = ({ to }: AddTermProps) => (
   <Link to="/create">
     <Button bg="secondary" px={3} mr={3}>
       +

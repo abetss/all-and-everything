@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Card } from 'rebass';
 
-export const TermsCreateTerm = () => {
+export const CreateTerm = () => {
   let [term, setTerm] = useState('');
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(term);
   }
   return (
     <Card p={3}>

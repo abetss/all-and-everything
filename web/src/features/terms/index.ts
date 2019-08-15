@@ -1,2 +1,2 @@
 export * from './terms-notes.scene';
-export * from './terms-add.scene';
+export * from './add-term.scene';
