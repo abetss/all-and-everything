@@ -2,13 +2,13 @@ import React from 'react';
 import { Heading } from 'rebass';
 
 type PageHeadingProps = {
-  heading?: string;
+  title?: string;
 };
 
-export const PageHeading = ({ heading }: PageHeadingProps) => {
+export const PageHeading = ({ title }: PageHeadingProps) => {
   return (
     <Heading px={3} pt={3}>
-      {heading}
+      {title}
     </Heading>
   );
 };
