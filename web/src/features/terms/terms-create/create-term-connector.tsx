@@ -13,7 +13,9 @@ export const CreatePageConnector = () => {
     <AddTerm
       currentPages={pages}
       onAddTermClick={(term: string) => setTerm([term])}
-      onAddClick={(page: number) => setPages([...pages, page])}
+      onAddClick={(page: number) => {
+        pages.includes(page) ? setPages([...pages]) : setPages([...pages, page]);
+      }}
       onRemoveClick={(removePageNumber: string) => {
         setPages(removeIndexElement(pages, removePageNumber));
         //  setPages()
