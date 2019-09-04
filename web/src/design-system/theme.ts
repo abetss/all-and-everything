@@ -31,7 +31,11 @@ export const theme = {
 
   // global theme for the primitive components that we import from rebass
   Button: {
+    margin: '0 16px',
     borderRadius: 8,
+    '&:disabled': {
+      opacity: 0.65,
+    },
   },
 
   Text: {
@@ -45,7 +49,6 @@ export const theme = {
       },
     },
   },
-
   cards: {
     clickable: {
       '&:hover': {

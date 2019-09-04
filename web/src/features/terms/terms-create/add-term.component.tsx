@@ -8,14 +8,15 @@ export const AddTerm = (props: any) => (
     <Flex alignItems="center" justifyContent="center">
       <PageHeading title={'Create new term'} />
     </Flex>
-    <Card>
-      <CreateTerm />
+    <Flex alignItems="center" justifyContent="center">
+      <CreateTerm flex-basis="33%" onAddTermClick={props.onAddTermClick} />
       <CreatePage
+        flex-basis="33%"
         addedPages={props.currentPages}
         onAddClick={props.onAddClick}
         onRemoveClick={props.onRemoveClick}
       />
-    </Card>
+    </Flex>
   </Box>
 );
 

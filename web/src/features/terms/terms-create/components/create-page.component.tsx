@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Card } from 'rebass';
-import { string } from 'prop-types';
-
+import { Button, Card, Flex } from 'rebass';
+import styled from 'styled-components';
 interface CreatePageProps {
   addedPages: number[];
   onAddClick: (pageNumber: string) => void;
   onRemoveClick: (pageIndex: number) => void;
 }
+const Input = styled.input`
+  font-size: 16px;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  border-radius: 3px;
+  color: #999;
+  cursor: text;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  background: #fafafa;
+  margin:4px &:active,
+  &:focus {
+    text-align: left;
+  }
+`;
 
+const Label = styled.label`
+  font-size: 16px;
+  margin: 4px;
+  width: 80%;
+`;
 //<CreatePage addedPages={[3, 10, 15]} onAddClick={onAddClick} />
 
 export const CreatePage = (props: CreatePageProps) => {
@@ -15,33 +36,40 @@ export const CreatePage = (props: CreatePageProps) => {
 
   let pageList = props.addedPages.map((page: any, i: number) => {
     return (
-      <Button onClick={() => props.onRemoveClick(i)} key={i}>
+      <Button mx={1} onClick={() => props.onRemoveClick(i)} key={i}>
         {page}
       </Button>
     );
   });
   return (
-    <div>
-      <div>
-        Pages:
-        <input
-          type="text"
-          value={text}
-          name="page"
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => setText(event.target.value)}
-        />
-      </div>
-
-      <Button
-        onClick={() => {
-          props.onAddClick(text);
-          setText('');
-          // setPages(pages.push(page));
-        }}
-      >
-        Add page
-      </Button>
-      <div>{props.addedPages.length ? pageList : <h3>No Pages added</h3>}</div>
-    </div>
+    <Flex flexDirection="column">
+      <Flex alignItems="center">
+        <Card p={2}>
+          <Label>Pages:</Label>
+          <Input
+            type="text"
+            value={text}
+            name="page"
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setText(event.target.value)}
+          />
+        </Card>
+        <Button
+          disabled={text == ''}
+          mx={2}
+          onClick={() => {
+            props.onAddClick(text);
+            setText('');
+            // setPages(pages.push(page));
+          }}
+        >
+          Add page
+        </Button>
+      </Flex>
+      <Flex alignItems="center">
+        <Card px={2}>
+          {props.addedPages.length ? <h3>Added Pages : {pageList}</h3> : <h3>No Pages added</h3>}
+        </Card>
+      </Flex>
+    </Flex>
   );
 };
