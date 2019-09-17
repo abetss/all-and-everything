@@ -9,9 +9,8 @@ export const AddTerm = (props: any) => (
       <PageHeading title={'Create new term'} />
     </Flex>
     <Flex alignItems="center" justifyContent="center">
-      <CreateTerm flex-basis="33%" onAddTermClick={props.onAddTermClick} />
+      <CreateTerm onAddTermClick={props.onAddTermClick} />
       <CreatePage
-        flex-basis="33%"
         addedPages={props.currentPages}
         onAddClick={props.onAddClick}
         onRemoveClick={props.onRemoveClick}

@@ -32,12 +32,12 @@ const Label = styled.label`
 //<CreatePage addedPages={[3, 10, 15]} onAddClick={onAddClick} />
 
 export const CreatePage = (props: CreatePageProps) => {
-  const [text, setText] = useState('');
+  const [page, setPage] = useState('');
 
-  let pageList = props.addedPages.map((page: any, i: number) => {
+  let pageList = props.addedPages.map((pages: any, i: number) => {
     return (
       <Button mx={1} onClick={() => props.onRemoveClick(i)} key={i}>
-        {page}
+        {pages}
       </Button>
     );
   });
@@ -48,17 +48,17 @@ export const CreatePage = (props: CreatePageProps) => {
           <Label>Pages:</Label>
           <Input
             type="text"
-            value={text}
+            value={page}
             name="page"
-            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setText(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPage(event.target.value)}
           />
         </Card>
         <Button
-          disabled={text == ''}
+          disabled={page == ''}
           mx={2}
           onClick={() => {
-            props.onAddClick(text);
-            setText('');
+            props.onAddClick(page);
+            setPage('');
             // setPages(pages.push(page));
           }}
         >

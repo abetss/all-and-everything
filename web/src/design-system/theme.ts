@@ -41,7 +41,23 @@ export const theme = {
   Text: {
     fontFamily: 'open-sans',
   },
-
+  Input: {
+    border: 'solid 1px #dbdbdb',
+    borderRadius: '3px',
+    color: '#262626',
+    cursor: 'text',
+    fontSize: '14px',
+    fontWeight: '300',
+    textAlign: 'center',
+    background: '#fafafa',
+    margin: '4px',
+    '&:active': {
+      textAlign: 'left',
+    },
+    '&:focus': {
+      textAlign: 'left',
+    },
+  },
   buttons: {
     clickable: {
       '&:hover': {
