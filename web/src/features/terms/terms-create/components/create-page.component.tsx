@@ -32,12 +32,12 @@ const Label = styled.label`
 //<CreatePage addedPages={[3, 10, 15]} onAddClick={onAddClick} />
 
 export const CreatePage = (props: CreatePageProps) => {
-  const [page, setPage] = useState('');
+  const [page, setPage] = useState();
 
-  let pageList = props.addedPages.map((pages: any, i: number) => {
+  let pageList = props.addedPages.map((addedPage: number, i: number) => {
     return (
       <Button mx={1} onClick={() => props.onRemoveClick(i)} key={i}>
-        {pages}
+        {addedPage}
       </Button>
     );
   });
