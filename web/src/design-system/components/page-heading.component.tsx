@@ -2,13 +2,21 @@ import React from 'react';
 import { Heading } from 'rebass';
 
 type PageHeadingProps = {
-  title?: string;
+  children?: string;
 };
 
-export const PageHeading = ({ title }: PageHeadingProps) => {
+export const PageHeading = ({ children }: PageHeadingProps) => {
   return (
-    <Heading px={3} pt={3} mb={5}>
-      {title}
+    <Heading pt={3} mb={2} fontSize={6} color="primary">
+      {children}
+    </Heading>
+  );
+};
+
+export const SidePageHeading = ({ children }: PageHeadingProps) => {
+  return (
+    <Heading pt={3} mb={1} fontSize={4} color="primary">
+      {children}
     </Heading>
   );
 };

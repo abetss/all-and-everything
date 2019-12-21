@@ -1,2 +1,2 @@
-export * from './terms-notes.scene';
-export * from './add-term.scene';
+export * from './terms-notes.page';
+export * from './create-term.page';

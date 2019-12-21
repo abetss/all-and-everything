@@ -4,7 +4,7 @@ import { TermDetailConnector } from './term-detail';
 import { TermsListConnector } from './terms-list';
 import { useTermQueryParam } from './utils';
 
-export const TermsNotesScene = () => {
+export const TermsNotesPage = () => {
   const [termId] = useTermQueryParam();
   return (
     <Flex>

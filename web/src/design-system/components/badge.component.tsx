@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'rebass';
-import { PrimaryText } from './primary-text.component';
+import { PrimaryText } from './typography/primary-text.component';
 
 type BadgeProps = {
   children: string | number;
