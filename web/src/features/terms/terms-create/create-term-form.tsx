@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Flex, Box, Card } from 'rebass/styled-components';
-import { CreateTerm, CreatePage } from './components';
+import React from 'react';
+import { Flex } from 'rebass/styled-components';
+import { CreatePage } from './components';
 import { TextField } from '../../../design-system';
 
 export const CreateTermForm = (props: any) => {

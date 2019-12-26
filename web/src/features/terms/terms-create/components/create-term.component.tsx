@@ -6,7 +6,7 @@ interface CreateTermProps {
 }
 
 export const CreateTerm = (props: CreateTermProps) => {
-  let [term, setTerm] = useState('');
+  let [term] = useState('');
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }

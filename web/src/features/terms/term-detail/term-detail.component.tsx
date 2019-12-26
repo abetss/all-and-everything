@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Box } from 'rebass/styled-components';
+import { Box } from 'rebass/styled-components';
 import { TermNotes } from './components/term-notes.component';
 import { TermTags } from './components/term-tags.component';
 import { TermPages } from './components/term-pages.component';

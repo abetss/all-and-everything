@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Card, Flex, Box } from 'rebass/styled-components';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import { Flex, Box } from 'rebass/styled-components';
 import { TextField, Badge, CircleButton } from '../../../../design-system';
 interface CreatePageProps {
   addedPages: number[];

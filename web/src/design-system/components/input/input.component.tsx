@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Card, Flex, Box } from 'rebass/styled-components';
-
 import styled from 'styled-components';
 
 export const Input = styled.input`
@@ -21,5 +18,4 @@ export const Input = styled.input`
     text-align: left;
   }
 `;
-// { name, label, type, variant, onChange, value }
 export { TextField } from '@material-ui/core';

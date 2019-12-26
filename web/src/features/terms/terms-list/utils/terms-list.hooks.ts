@@ -7,10 +7,13 @@ export const useTerms = (terms: any) => {
   const [filteredTerms, setFilteredTerms] = useState(allTerms);
   const [termId, setTermId] = useQueryParam('id', NumberParam);
 
-  const filterList = useCallback((input: string) => {
-    const updatedList = allTerms.filter(findStringMatch(input));
-    setFilteredTerms(updatedList);
-  }, []);
+  const filterList = useCallback(
+    (input: string) => {
+      const updatedList = allTerms.filter(findStringMatch(input));
+      setFilteredTerms(updatedList);
+    },
+    [allTerms],
+  );
 
   return [allTerms, filteredTerms, setTermId, termId, filterList];
 };
