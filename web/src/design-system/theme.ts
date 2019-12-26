@@ -30,23 +30,26 @@ export const theme = {
   colors,
 
   // global theme for the primitive components that we import from rebass
-  Button: {
-    borderRadius: 3,
-    '&:disabled': {
-      opacity: 0.65,
-    },
-  },
+  // Button: {
+  //   borderRadius: 10000,
+  //   '&:disabled': {
+  //     opacity: 0.65,
+  //   },
+  //   '&:hover': {
+  //     cursor: 'pointer',
+  //   },
+  // },
 
   Text: {
     fontFamily: 'open-sans',
   },
-  buttons: {
-    clickable: {
-      '&:hover': {
-        cursor: 'pointer',
-      },
-    },
-  },
+  // buttons: {
+  //   clickable1: {
+  //     '&:hover': {
+  //       cursor: 'pointer',
+  //     },
+  //   },
+  // },
   cards: {
     clickable: {
       '&:hover': {

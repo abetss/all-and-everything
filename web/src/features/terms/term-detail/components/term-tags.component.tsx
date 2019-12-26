@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from 'rebass/styled-components';
-import { TermTag } from './term-tag.component';
+import { Badge } from '../../../../design-system';
 
 interface TermTagsProps {
   tags: string[];
@@ -9,13 +9,14 @@ interface TermTagsProps {
 export const TermTags = ({ tags }: TermTagsProps) => (
   <Flex mt={2}>
     {tags.map((tag: string) => (
-      <TermTag
+      <Badge
+        mr={1}
+        bg="primary-variant"
+        key={`term-tag-${tag}`}
         onClick={() => {
           console.log(tag);
         }}
-      >
-        {tag}
-      </TermTag>
+      >{`#${tag}`}</Badge>
     ))}
   </Flex>
 );

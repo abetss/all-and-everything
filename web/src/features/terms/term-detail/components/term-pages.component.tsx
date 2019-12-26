@@ -10,7 +10,9 @@ export const TermPages = ({ pages }: TermPagesProps) => (
   <Flex mt={2}>
     <Text fontSize={3}>Pages: </Text>
     {pages.map((page: number) => (
-      <Badge>{page}</Badge>
+      <Badge mr={1} key={`term-page-${page}`}>
+        {page}
+      </Badge>
     ))}
   </Flex>
 );

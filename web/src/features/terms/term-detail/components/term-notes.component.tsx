@@ -11,8 +11,8 @@ export const TermNotes = ({ notes }: TermNotesProps) => (
     {notes.length > 0 && (
       <Box mt={3}>
         <Text fontSize={3}>Notes: </Text>
-        {notes.map((note: any) => (
-          <TermNote note={note} />
+        {notes.map((note: any, index: number) => (
+          <TermNote key={`term-note-${index}`} note={note} />
         ))}
       </Box>
     )}
