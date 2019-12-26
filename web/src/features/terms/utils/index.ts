@@ -1,1 +1,1 @@
-export * from './term-queryparam.hooks';
+export * from './termQueryParam.hooks';

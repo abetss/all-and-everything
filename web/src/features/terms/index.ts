@@ -1,2 +1,2 @@
-export * from './terms-notes.page';
-export * from './create-term.page';
+export * from './TermsNotes.page';
+export * from './CreateTerm.page';

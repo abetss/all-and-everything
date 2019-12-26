@@ -1,1 +1,1 @@
-export * from './create-page.component';
+export * from './PagesInputGroup';

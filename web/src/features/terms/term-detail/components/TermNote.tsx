@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'rebass/styled-components';
-import { PrimaryText } from '../../../../design-system';
+import { Text } from '../../../../design-system';
 
 interface TermNoteProps {
   note: any;
@@ -8,6 +8,6 @@ interface TermNoteProps {
 
 export const TermNote = ({ note }: TermNoteProps) => (
   <Card p={3} my={2} border={1} borderColor="surface">
-    <PrimaryText>{note.text}</PrimaryText>
+    <Text>{note.text}</Text>
   </Card>
 );

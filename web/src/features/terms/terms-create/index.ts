@@ -1,2 +1,2 @@
-export * from './create-term-connector';
-export * from './create-term-form';
+export * from './CreateTerm.connector';
+export * from './CreateTerm';

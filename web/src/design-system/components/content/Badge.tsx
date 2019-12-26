@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from 'rebass/styled-components';
-import { PrimaryText } from '../typography/primary-text.component';
+import { Text } from '../typography/Text.component';
 import { MarginProps, ColorProps } from 'styled-system';
 
 export interface BadgeProps extends MarginProps, ColorProps {
@@ -22,7 +22,7 @@ export const Badge = ({ children, onClick, color = 'on-secondary', ...props }: B
         ':hover': { cursor: onClick ? 'pointer' : 'default' },
       }}
     >
-      <PrimaryText color={color}>{children}</PrimaryText>
+      <Text color={color}>{children}</Text>
     </Box>
   );
 };

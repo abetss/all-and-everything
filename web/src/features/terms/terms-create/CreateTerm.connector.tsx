@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { CreateTermForm } from './create-term-form';
+import { CreateTerm } from './CreateTerm';
 
 export const CreatePageConnector = () => {
   let [pages, setPages] = useState<any>([]);
   let [term, setTerm] = useState<any>('');
 
   return (
-    <CreateTermForm
+    <CreateTerm
       currentPages={pages}
       term={term}
       onTermChange={(term: string) => setTerm(term)}

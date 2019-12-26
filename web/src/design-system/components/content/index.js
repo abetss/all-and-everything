@@ -1,2 +1,2 @@
-export * from './badge.component';
-export * from './list-item.component';
+export * from './Badge';
+export * from './ListItem';

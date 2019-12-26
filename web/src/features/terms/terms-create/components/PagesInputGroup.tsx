@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Flex, Box } from 'rebass/styled-components';
 import { TextField, Badge, CircleButton } from '../../../../design-system';
-interface CreatePageProps {
+
+interface PagesInputGroupProps {
   addedPages: number[];
   onAddPageClicked: (pageNumber: string) => void;
   onRemovePageClick: (pageNumber: number) => void;
 }
 
-export const CreatePage = ({
+export const PagesInputGroup = ({
   addedPages,
   onAddPageClicked,
   onRemovePageClick,
-}: CreatePageProps) => {
+}: PagesInputGroupProps) => {
   const [page, setPage] = useState('');
 
   return (

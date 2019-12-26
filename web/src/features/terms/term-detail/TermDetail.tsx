@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box } from 'rebass/styled-components';
-import { TermNotes } from './components/term-notes.component';
-import { TermTags } from './components/term-tags.component';
-import { TermPages } from './components/term-pages.component';
+import { TermNotes } from './components/TermNotes';
+import { TermTags } from './components/TermTags';
+import { TermPages } from './components/TermPages';
 import { PageHeading } from '../../../design-system';
 
 interface TermDetailProps {

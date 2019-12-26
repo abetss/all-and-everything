@@ -1,1 +1,1 @@
-export * from './term-detail.connector';
+export * from './TermDetail.connector';

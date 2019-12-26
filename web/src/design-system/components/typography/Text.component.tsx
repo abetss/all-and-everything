@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, TextProps } from 'rebass/styled-components';
+import { Text as RebassText, TextProps } from 'rebass/styled-components';
 
-export const PrimaryText = ({ children, ...props }: TextProps) => (
-  <Text
+export const Text = ({ children, ...props }: TextProps) => (
+  <RebassText
     color="on-surface"
     textAlign="left"
     {...props}
@@ -13,5 +13,5 @@ export const PrimaryText = ({ children, ...props }: TextProps) => (
     letterSpacing="normal"
   >
     {children}
-  </Text>
+  </RebassText>
 );

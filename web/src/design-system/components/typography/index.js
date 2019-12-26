@@ -1,2 +1,2 @@
-export * from './primary-text.component';
-export * from './page-heading.component';
+export * from './Text.component';
+export * from './Heading';

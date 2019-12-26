@@ -1,2 +1,2 @@
-export * from './input.component';
-export * from './circle-button';
+export * from './TextField';
+export * from './CircleButton';

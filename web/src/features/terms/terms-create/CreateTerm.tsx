@@ -1,9 +1,9 @@
 import React from 'react';
 import { Flex } from 'rebass/styled-components';
-import { CreatePage } from './components';
+import { PagesInputGroup } from './components';
 import { TextField } from '../../../design-system';
 
-export const CreateTermForm = (props: any) => {
+export const CreateTerm = (props: any) => {
   return (
     <Flex width={1} flexDirection="column">
       <Flex alignItems="center">
@@ -19,7 +19,7 @@ export const CreateTermForm = (props: any) => {
         />
       </Flex>
 
-      <CreatePage
+      <PagesInputGroup
         addedPages={props.currentPages}
         onAddPageClicked={props.onAddPageClicked}
         onRemovePageClick={props.onRemovePageClick}

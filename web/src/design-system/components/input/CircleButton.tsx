@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'rebass/styled-components';
 import { MarginProps } from 'styled-system';
 
-interface IconButtonProps extends MarginProps {
+interface CircleButtonProps extends MarginProps {
   size: 'small' | 'medium';
   disabled?: Boolean;
   onClick?: (this: void, e: Event) => void;
@@ -27,7 +27,13 @@ const sizes = {
   medium: mediumSize,
 };
 
-export const CircleButton = ({ onClick, disabled, size, children, ...props }: IconButtonProps) => {
+export const CircleButton = ({
+  onClick,
+  disabled,
+  size,
+  children,
+  ...props
+}: CircleButtonProps) => {
   const sizeProps = sizes[size];
 
   return (

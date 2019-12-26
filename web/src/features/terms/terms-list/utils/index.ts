@@ -1,1 +1,1 @@
-export * from './terms-list.hooks';
+export * from './termsList.hooks';

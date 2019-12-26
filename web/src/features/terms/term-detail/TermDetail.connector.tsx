@@ -1,7 +1,7 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
-import { TermDetail } from './term-detail.component';
+import { TermDetail } from './TermDetail';
 
 interface TermDetailConnectorProps {
   id?: any;
