@@ -78,35 +78,16 @@ export const colorPallet = {
 
 // categories inspired by https://material.io/design/color/the-color-system.html#color-theme-creation
 export const colors = {
-  // A primary color is the color displayed most frequently across your app’s screens and components.
-  primary: colorSpectrum['dark-blue'],
-  'primary-variant': colorSpectrum.blue,
-  'primary-light': colorSpectrum['light-blue'],
-  /**
-   * A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI.
-   * Secondary colors are best for:
-   * - Floating action buttons
-   * - Selection controls, like sliders and switches
-   * - Highlighting selected text
-   * - Progress bars
-   * - Links and headlines
-   */
-  secondary: colorSpectrum['dark-green'],
-  'secondary-variant': colorSpectrum.green,
-  // appears behind scrollable content
-  background: colorSpectrum.white,
-  // affect surfaces of components, such as cards, sheets, and menus.
-  surface: colorSpectrum['near-white'],
-  // indicates errors in components, such as invalid text in a text field
-  error: colorSpectrum.red,
-  /**
-   * “On” colors are primarily applied to text, iconography, and strokes. Sometimes,
-   * they are applied to surfaces. Referring to the fact that they color elements that
-   * are sometimes placed “on” top of key surfaces that use a primary color, secondary color,
-   * surface color, background color, or error color
-   */
-  'on-primary': colorSpectrum.white,
-  'on-secondary': colorSpectrum.white,
-  'on-background': colorSpectrum.black,
-  'on-surface': colorSpectrum.black,
+  primary: '#00449e',
+  'primary-variant': '#357edd',
+  'primary-variant2': '#96ccff',
+  secondary: '#137752',
+  'secondary-variant': '#19a974',
+  background: '#fff',
+  surface: '#f4f4f4',
+  error: '#ff4136',
+  'on-primary': '#fff',
+  'on-secondary': '#fff',
+  'on-background': '#000',
+  'on-surface': '#000',
 };

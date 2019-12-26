@@ -7,16 +7,14 @@ interface TermsSearchProps {
 }
 
 export const TermsSearch = ({ onChange }: TermsSearchProps) => (
-  <Box px={3} pb={3}>
-    <form noValidate autoComplete="on">
-      <TextField
-        id="outlined-search"
-        label="Search field"
-        type="search"
-        margin="normal"
-        variant="outlined"
-        onChange={(event: React.ChangeEvent<HTMLSelectElement>) => onChange(event.target.value)}
-      />
-    </form>
+  <Box mx={3} mb={3}>
+    <TextField
+      id="outlined-search"
+      label="Search field"
+      type="search"
+      margin="normal"
+      variant="outlined"
+      onChange={(event: React.ChangeEvent<HTMLSelectElement>) => onChange(event.target.value)}
+    />
   </Box>
 );
