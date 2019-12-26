@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextProps } from 'rebass';
+import { Text, TextProps } from 'rebass/styled-components';
 
 export const PrimaryText = ({ children, ...props }: TextProps) => (
   <Text

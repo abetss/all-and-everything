@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Flex } from 'rebass';
+import { Card, Button, Flex } from 'rebass/styled-components';
 
 interface CreateTermProps {
   onAddTermClick: (term: string) => void;

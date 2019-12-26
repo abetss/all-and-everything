@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from 'rebass';
+import { Heading } from 'rebass/styled-components';
 
 type PageHeadingProps = {
   children?: string;

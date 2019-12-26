@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Card, Flex, Box } from 'rebass';
+import { Button, Card, Flex, Box } from 'rebass/styled-components';
 
 import styled from 'styled-components';
 

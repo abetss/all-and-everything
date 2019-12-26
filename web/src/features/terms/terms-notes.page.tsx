@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box } from 'rebass';
+import { Flex, Box } from 'rebass/styled-components';
 import { TermDetailConnector } from './term-detail';
 import { TermsListConnector } from './terms-list';
 import { useTermQueryParam } from './utils';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'rebass';
+import { Card } from 'rebass/styled-components';
 import { PrimaryText } from '../../../../design-system';
 
 interface TermNoteProps {

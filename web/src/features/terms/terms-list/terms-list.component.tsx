@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Card, Flex, Button } from 'rebass';
+import { Heading, Card, Flex, Button } from 'rebass/styled-components';
 import { useTerms } from './utils';
 import { TermsSearch, TermsList, AddTerm } from './components';
 import { PageHeading, SidePageHeading } from '../../../design-system/components/';

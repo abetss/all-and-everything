@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'rebass';
+import { Card } from 'rebass/styled-components';
 
 export const ListItem = ({ children, id, onClick, selected }: any) => {
   return (

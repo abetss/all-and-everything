@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from 'rebass';
+import { Flex } from 'rebass/styled-components';
 import { TermTag } from './term-tag.component';
 
 interface TermTagsProps {

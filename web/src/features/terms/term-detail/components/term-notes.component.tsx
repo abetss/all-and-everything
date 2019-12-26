@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Text } from 'rebass';
+import { Flex, Box, Text } from 'rebass/styled-components';
 import { TermNote } from './term-note.component';
 
 interface TermNotesProps {

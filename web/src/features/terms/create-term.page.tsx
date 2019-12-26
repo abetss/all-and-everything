@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Card, Heading } from 'rebass';
+import { Flex, Box, Card, Heading } from 'rebass/styled-components';
 import { PageHeading } from '../../design-system/components';
 import { CreatePageConnector } from '../terms-create';
 

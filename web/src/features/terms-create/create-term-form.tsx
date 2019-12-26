@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, Box, Card } from 'rebass';
+import { Flex, Box, Card } from 'rebass/styled-components';
 import { CreateTerm, CreatePage } from './components';
 import { TextField } from '../../design-system';
 
