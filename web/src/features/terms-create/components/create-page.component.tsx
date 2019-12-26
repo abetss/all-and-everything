@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Card, Flex, Box } from 'rebass';
 import styled from 'styled-components';
-import { Input, TextField, Badge } from '../../../../design-system';
+import { TextField, Badge } from '../../../design-system';
 interface CreatePageProps {
   addedPages: number[];
   onAddPageClicked: (pageNumber: string) => void;

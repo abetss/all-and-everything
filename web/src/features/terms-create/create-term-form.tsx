@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Flex, Box, Card } from 'rebass';
 import { CreateTerm, CreatePage } from './components';
-import { TextField } from '../../../design-system';
+import { TextField } from '../../design-system';
 
 export const CreateTermForm = (props: any) => {
   return (
