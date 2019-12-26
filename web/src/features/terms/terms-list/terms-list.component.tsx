@@ -9,7 +9,8 @@ export const TermsListComponent = ({ terms }: any, title: string, pageView: stri
   const [, filteredTerms, setTermId, termId, filterList] = useTerms(terms);
   return (
     <Card width={1} border={1} borderColor="surface">
-      <SidePageHeading>Terms List</SidePageHeading>
+      <SidePageHeading ml={3}>Terms List</SidePageHeading>
+
       <Flex alignItems="center">
         <TermsSearch onChange={filterList} />
         <Link to="/create">

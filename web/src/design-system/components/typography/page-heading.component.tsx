@@ -1,9 +1,10 @@
 import React from 'react';
 import { Heading } from 'rebass/styled-components';
+import { MarginProps } from 'styled-system';
 
-type PageHeadingProps = {
+interface PageHeadingProps extends MarginProps {
   children?: string;
-};
+}
 
 export const PageHeading = ({ children }: PageHeadingProps) => {
   return (
@@ -13,9 +14,9 @@ export const PageHeading = ({ children }: PageHeadingProps) => {
   );
 };
 
-export const SidePageHeading = ({ children }: PageHeadingProps) => {
+export const SidePageHeading = ({ children, ...props }: PageHeadingProps) => {
   return (
-    <Heading pt={3} mb={1} fontSize={4} color="primary">
+    <Heading pt={3} fontSize={4} color="primary" {...props} mb={1}>
       {children}
     </Heading>
   );
