@@ -13,7 +13,7 @@ export const TermsListComponent = ({ terms }: any, title: string, pageView: stri
       <Flex alignItems="center">
         <TermsSearch onChange={filterList} />
         <Link to="/create">
-          <CircleButton size="medium" onClick={() => {}} bg="secondary">
+          <CircleButton size="medium" bg="secondary">
             +
           </CircleButton>
         </Link>
