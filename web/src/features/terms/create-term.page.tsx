@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Box, Card, Heading } from 'rebass/styled-components';
 import { PageHeading } from '../../design-system/components';
-import { CreatePageConnector } from '../terms-create';
+import { CreatePageConnector } from './terms-create';
 
 export const CreateTermPage = () => (
   <Box width={1} px={5}>

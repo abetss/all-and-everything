@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Card, Flex, Box } from 'rebass/styled-components';
 import styled from 'styled-components';
-import { TextField, Badge } from '../../../design-system';
+import { TextField, Badge, CircleButton } from '../../../../design-system';
 interface CreatePageProps {
   addedPages: number[];
   onAddPageClicked: (pageNumber: string) => void;
@@ -26,12 +26,9 @@ export const CreatePage = ({
         onChange={(event: React.ChangeEvent<HTMLSelectElement>) => setPage(event.target.value)}
       />
       <Box ml={3} pb={1}>
-        <Button
-          variant="clickable"
-          mr={2}
-          borderRadius={3}
-          px={2}
-          py={1}
+        <CircleButton
+          size="small"
+          mr={3}
           disabled={page === ''}
           onClick={() => {
             onAddPageClicked(page);
@@ -39,9 +36,10 @@ export const CreatePage = ({
           }}
         >
           +
-        </Button>
+        </CircleButton>
+
         {addedPages.map((addedPage: number, i: number) => (
-          <Badge onClick={() => onRemovePageClick(addedPage)} key={i}>
+          <Badge mr={1} onClick={() => onRemovePageClick(addedPage)} key={i}>
             {addedPage}
           </Badge>
         ))}
