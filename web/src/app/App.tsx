@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import { theme } from '../design-system';
@@ -9,6 +9,12 @@ import { createClient } from './apollo';
 
 const client = createClient();
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+`;
+
 // Using both ApolloProvider and ApolloHooksProvider in case we don't want to use
 // apollo hooks all the time. Otherwise, we can remove the ApolloProvider later
 
@@ -16,6 +22,7 @@ export default class App extends React.PureComponent {
   render() {
     return (
       <NoSsr>
+        <GlobalStyle />
         <ThemeProvider theme={theme}>
           <ApolloProvider client={client}>
             <ApolloHooksProvider client={client}>
