@@ -1,4 +1,5 @@
-import { ApolloServer } from 'apollo-server';
+// import { ApolloServer } from 'apollo-server';
+import { ApolloServer } from 'apollo-server-lambda';
 
 import { makeExecutableSchema } from 'graphql-tools';
 import { resolvers } from './resolvers';
@@ -6,7 +7,7 @@ import { typeDefs } from './typedefs';
 import { schemaLogger } from './utils';
 import { createStore, DatabaseAPI } from '../data-sources/db';
 
-export const startServer = () => {
+export const createServer = () => {
   const store = createStore();
 
   // set up any dataSources our resolvers need
@@ -22,12 +23,18 @@ export const startServer = () => {
 
   const server = new ApolloServer({
     schema,
-    dataSources
+    dataSources,
+    playground: true,
+    introspection: true
   });
 
-  server.listen().then(({ url }) => {
-    console.log(`🚀  Server ready at ${url}`);
-  });
+  return server;
 };
 
-export const myName = 'hassan';
+// export const startServer = () => {
+//   const server = createServer();
+
+//   server.listen().then(({ url }) => {
+//     console.log(`🚀  Server ready at ${url}`);
+//   });
+// };
