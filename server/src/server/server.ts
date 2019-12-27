@@ -7,25 +7,27 @@ import { schemaLogger } from './utils';
 import { createStore, DatabaseAPI } from '../data-sources/db';
 
 export const startServer = () => {
-	const store = createStore();
+  const store = createStore();
 
-	// set up any dataSources our resolvers need
-	const dataSources = () => ({
-		databaseApi: new DatabaseAPI({ store })
-	});
+  // set up any dataSources our resolvers need
+  const dataSources = () => ({
+    databaseApi: new DatabaseAPI({ store })
+  });
 
-	const schema = makeExecutableSchema({
-		typeDefs,
-		resolvers,
-		logger: schemaLogger
-	});
+  const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers,
+    logger: schemaLogger
+  });
 
-	const server = new ApolloServer({
-		schema,
-		dataSources
-	});
+  const server = new ApolloServer({
+    schema,
+    dataSources
+  });
 
-	server.listen().then(({ url }) => {
-		console.log(`🚀  Server ready at ${url}`);
-	});
+  server.listen().then(({ url }) => {
+    console.log(`🚀  Server ready at ${url}`);
+  });
 };
+
+export const myName = 'hassan';

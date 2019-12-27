@@ -1,0 +1,23 @@
+service: hello-world
+
+provider:
+  name: aws
+  profile: personal
+  runtime: nodejs8.10
+  stage: dev
+
+functions:
+  hello:
+    handler: dist/hello.handler
+    #    The following are a few example events you can configure
+    #    NOTE: Please make sure to change your handler code to work with those events
+    #    Check the event documentation for details
+    events:
+      - http: GET hello
+  graphql:
+    handler: dist/index.handler
+    #    The following are a few example events you can configure
+    #    NOTE: Please make sure to change your handler code to work with those events
+    #    Check the event documentation for details
+    events:
+      - http: GET hello
