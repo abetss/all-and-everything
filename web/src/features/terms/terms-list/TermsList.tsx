@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export const TermsList = ({ terms }: any, title: string, pageView: string) => {
   const [, filteredTerms, setTermId, termId, filterList] = useTerms(terms);
   return (
-    <Card width="100%" border={1} borderColor="surface">
+    <Card border={1} borderColor="surface">
       <SidePageHeading ml={3}>Terms List</SidePageHeading>
 
       <Flex alignItems="center">

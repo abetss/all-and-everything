@@ -8,7 +8,7 @@ export const TermsNotesPage = () => {
   const [termId] = useTermQueryParam();
   return (
     <Flex>
-      <Box width={1 / 4} bg="surface" pr={1}>
+      <Box maxWidth="25%" bg="surface" pr={3}>
         <TermsListConnector />
       </Box>
       <Box width={3 / 4}>{termId && <TermDetailConnector id={termId} />}</Box>

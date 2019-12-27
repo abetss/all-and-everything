@@ -5,7 +5,7 @@ import { TextField, Button } from '../../../design-system';
 
 export const CreateTerm = (props: any): any => {
   return (
-    <Flex width="100%" flexDirection="column">
+    <Flex flexDirection="column">
       <Flex alignItems="center">
         <TextField
           label="Term"
@@ -13,9 +13,7 @@ export const CreateTerm = (props: any): any => {
           type="text"
           margin="none"
           value={props.term}
-          onChange={(event: React.ChangeEvent<HTMLSelectElement>) =>
-            props.onTermChange(event.target.value)
-          }
+          onChange={(event: React.ChangeEvent<HTMLSelectElement>) => props.onTermChange(event.target.value)}
         />
       </Flex>
 
