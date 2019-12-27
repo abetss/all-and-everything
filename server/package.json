@@ -8,7 +8,7 @@
     "start": "ts-node-dev src/index.ts",
     "build": "tsc",
     "deploy": "yarn build && sls deploy",
-    "serve": "sls offline start",
+    "serve": "yarn build && sls offline start",
     "schema:push": "npx apollo service:push --endpoint=http://localhost:4000",
     "schema:validate": "npx apollo service:check"
   },

@@ -1,14 +1,10 @@
-service: hello-world
+service: beelzebub
 
 provider:
   name: aws
   profile: personal
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   stage: dev
-
-plugins:
-  - serverless-plugin-typescript
-  - serverless-offline
 
 custom:
   serverless-offline:
@@ -16,11 +12,11 @@ custom:
 
 functions:
   hello:
-    handler: src/hello.handler
+    handler: .build/src/hello.handler
     events:
       - http: GET hello
   graphql:
-    handler: src/index.handler
+    handler: .build/src/index.handler
     events:
       - http:
           method: any
