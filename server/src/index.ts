@@ -1,4 +1,5 @@
 import { createServer } from './server';
+import { helloPT } from './data-sources/db/ptClient';
 
 const server = createServer();
 exports.handler = server.createHandler({
@@ -7,3 +8,5 @@ exports.handler = server.createHandler({
     credentials: true
   }
 });
+
+exports.handlerPT = helloPT;

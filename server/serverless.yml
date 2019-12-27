@@ -13,6 +13,10 @@ custom:
     port: 4000
 
 functions:
+  hello:
+    handler: .build/src/index.handlerPT
+    events:
+      - http: GET hello
   graphql:
     handler: .build/src/index.handler
     events:

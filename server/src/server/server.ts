@@ -23,6 +23,13 @@ export const createServer = () => {
   const server = new ApolloServer({
     schema,
     dataSources,
+    context: ({ event, context }) => ({
+      headers: event.headers,
+      functionName: context.functionName,
+      event,
+      context
+    }),
+    tracing: true,
     playground: true,
     introspection: true
   });
