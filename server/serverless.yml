@@ -6,18 +6,22 @@ provider:
   runtime: nodejs8.10
   stage: dev
 
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    port: 4000
+
 functions:
   hello:
-    handler: dist/hello.handler
-    #    The following are a few example events you can configure
-    #    NOTE: Please make sure to change your handler code to work with those events
-    #    Check the event documentation for details
+    handler: src/hello.handler
     events:
       - http: GET hello
   graphql:
-    handler: dist/index.handler
-    #    The following are a few example events you can configure
-    #    NOTE: Please make sure to change your handler code to work with those events
-    #    Check the event documentation for details
+    handler: src/index.handler
     events:
-      - http: GET hello
+      - http:
+          method: any
+          path: graphql
