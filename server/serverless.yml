@@ -4,17 +4,15 @@ provider:
   name: aws
   profile: personal
   runtime: nodejs12.x
-  stage: dev
+
+plugins:
+  - serverless-offline
 
 custom:
   serverless-offline:
     port: 4000
 
 functions:
-  hello:
-    handler: .build/src/hello.handler
-    events:
-      - http: GET hello
   graphql:
     handler: .build/src/index.handler
     events:
