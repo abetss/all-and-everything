@@ -10,7 +10,7 @@ interface TermDetailProps {
 }
 
 export const TermDetail = ({ term }: TermDetailProps) => (
-  <Box width={1} p={3}>
+  <Box width="100%" p={3}>
     <PageHeading>{term.title}</PageHeading>
     {term.tags.length > 0 && <TermTags tags={term.tags} />}
     {term.pages.length > 0 && <TermPages pages={term.pages} />}

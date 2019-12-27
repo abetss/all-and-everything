@@ -23,9 +23,7 @@ export const theme = {
   },
   borders: [0, '1px solid', '2px solid', '4px solid', '8px solid', '16px solid', '32px solid'],
   radii: [0, 2, 4, 8, 16, 32, 9999, '100%'],
-  width: [16, 32, 64, 128, 256],
-  heights: [16, 32, 64, 128, 256],
-  maxWidths: [16, 32, 64, 128, 256, 512],
+  sizes: [16, 32, 64, 128, 256, 512, 1024],
   colorPallet,
   colors,
 

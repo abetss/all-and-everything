@@ -43,7 +43,7 @@ export const CircleButton = ({
       {...sizeProps}
       {...props}
       sx={{
-        ':hover': { cursor: 'pointer' },
+        ':hover': { cursor: 'pointer', opacity: '0.9' },
         borderRadius: 6,
       }}
     >

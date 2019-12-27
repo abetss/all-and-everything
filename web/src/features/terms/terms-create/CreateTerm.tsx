@@ -1,11 +1,11 @@
 import React from 'react';
 import { Flex } from 'rebass/styled-components';
 import { PagesInputGroup } from './components';
-import { TextField } from '../../../design-system';
+import { TextField, Button } from '../../../design-system';
 
-export const CreateTerm = (props: any) => {
+export const CreateTerm = (props: any): any => {
   return (
-    <Flex width={1} flexDirection="column">
+    <Flex width="100%" flexDirection="column">
       <Flex alignItems="center">
         <TextField
           label="Term"
@@ -24,6 +24,10 @@ export const CreateTerm = (props: any) => {
         onAddPageClicked={props.onAddPageClicked}
         onRemovePageClick={props.onRemovePageClick}
       />
+
+      <Button onClick={props.onTermSubmitted} mt={5}>
+        Create Term
+      </Button>
     </Flex>
   );
 };

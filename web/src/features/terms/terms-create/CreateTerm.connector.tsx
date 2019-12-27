@@ -1,24 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { CreateTerm } from './CreateTerm';
 
 export const CreatePageConnector = () => {
-  let [pages, setPages] = useState<any>([]);
-  let [term, setTerm] = useState<any>('');
+  const [pages, setPages] = useState<any>([]);
+  const [term, setTerm] = useState<String>('');
+
+  const handleTermSubmission = useCallback(() => {
+    console.log('handleTermSubmission', { pages, term });
+  }, [pages, term]);
+
+  const handleAddPageClicked = useCallback(
+    (page: number) => {
+      if (!pages.includes(page)) {
+        setPages([...pages, page]);
+      }
+    },
+    [pages],
+  );
+
+  const handleRemovePageClicked = useCallback(
+    (removePageNumber: number) => {
+      const newPages = pages.filter((page: number) => page !== removePageNumber);
+      setPages(newPages);
+    },
+    [pages],
+  );
 
   return (
     <CreateTerm
       currentPages={pages}
       term={term}
-      onTermChange={(term: string) => setTerm(term)}
-      onAddPageClicked={(page: number) => {
-        if (!pages.includes(page)) {
-          setPages([...pages, page]);
-        }
-      }}
-      onRemovePageClick={(removePageNumber: number) => {
-        const newPages = pages.filter((page: number) => page !== removePageNumber);
-        setPages(newPages);
-      }}
+      onTermChange={setTerm}
+      onAddPageClicked={handleAddPageClicked}
+      onRemovePageClick={handleRemovePageClicked}
+      onTermSubmitted={handleTermSubmission}
     />
   );
 };

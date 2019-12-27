@@ -4,7 +4,7 @@ import { Card } from 'rebass/styled-components';
 export const ListItem = ({ children, id, onClick, selected }: any) => {
   return (
     <Card
-      width={1}
+      width="100%"
       borderTop={1}
       borderColor="surface"
       p={3}
