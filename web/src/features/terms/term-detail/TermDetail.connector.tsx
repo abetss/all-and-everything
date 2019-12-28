@@ -4,7 +4,7 @@ import { useQuery } from 'react-apollo-hooks';
 import { TermDetail } from './TermDetail';
 
 interface TermDetailConnectorProps {
-  id?: any;
+  id?: number;
 }
 
 const FIND_TERM_QUERY = gql`

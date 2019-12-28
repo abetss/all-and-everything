@@ -1,9 +1,10 @@
 import React from 'react';
 import { Flex } from 'rebass/styled-components';
 import { ListItem } from 'src/design-system';
+import { getTerms_terms_list } from '../graphqlGenTypes/getTerms';
 
 interface TermsProps {
-  terms: Array<any>;
+  terms: getTerms_terms_list[];
   onClick: (id: number) => void;
   termId: number;
 }
