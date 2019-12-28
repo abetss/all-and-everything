@@ -7,6 +7,8 @@ import { HEROKU_API_KEY, HEROKU_POSTGRES_ID } from 'src/core/constants';
 let pgPool;
 
 const setupPgPool = async () => {
+  console.log('HEROKU_API_KEY', HEROKU_API_KEY);
+  console.log('HEROKU_POSTGRES_ID', HEROKU_POSTGRES_ID);
   const herokuApi = axios.create({
     baseURL: 'https://api.heroku.com/',
     headers: {
@@ -17,21 +19,15 @@ const setupPgPool = async () => {
 
   const herokuRes = await herokuApi.get(`addons/${HEROKU_POSTGRES_ID}/config`);
   const pgConnStr = herokuRes.data[0].value;
-  const { host, password, user, database, application_name, port } = parse(
-    pgConnStr
-  );
+  const parsedPgConnStr = parse(pgConnStr);
 
   // Use connection string from Heroku API response as a base. Overwrite "max"
   // and "ssl".
   const pgConfig: PoolConfig = {
-    host,
-    password,
-    user,
-    application_name,
-    port: Number(port),
+    ...parsedPgConnStr,
+    port: Number(parsedPgConnStr.port),
     max: 1,
-    ssl: true,
-    database: database != null ? database : undefined
+    ssl: true
   };
 
   pgPool = new pg.Pool(pgConfig);

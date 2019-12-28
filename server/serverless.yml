@@ -5,6 +5,9 @@ provider:
   profile: personal
   runtime: nodejs12.x
 
+package:
+  individually: true
+
 plugins:
   - serverless-webpack
   - serverless-offline
@@ -12,11 +15,11 @@ plugins:
 custom:
   serverless-offline:
     port: 4000
+  custom:
   webpack:
-    webpackConfig: 'webpack.config.js' # Name of webpack configuration file
-    includeModules: false # Node modules configuration for packaging
-    packager: 'yarn' # Packager that will be used to package your external modules
-    excludeFiles: src/**/*.test.js # Provide a glob for files to ignore
+    webpackConfig: 'webpack.config.js'
+    packager: 'yarn'
+    includeModules: true
 
 functions:
   hello:

@@ -5,7 +5,7 @@
     "inlineSources": true,
     "inlineSourceMap": true,
     "sourceRoot": "/",
-    "target": "ES2018",
+    "target": "es2017",
     "outDir": ".build",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -16,8 +16,6 @@
     "paths": {
       "*": ["*"]
     },
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "exclude": ["node_modules"]
+    "resolveJsonModule": true
+  }
 }
