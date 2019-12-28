@@ -1,33 +1,37 @@
-import pg from 'pg';
+import pg, { PoolConfig } from 'pg';
 import axios from 'axios';
 import { parse } from 'pg-connection-string';
-import { HEROKU_POSTGRES_ID, HEROKU_API_KEY } from './../../core/constants';
+import { HEROKU_API_KEY, HEROKU_POSTGRES_ID } from 'src/core/constants';
 
 // Pool will be reused for each invocation of the backing container.
 let pgPool;
 
-const herokuApi = axios.create({
-  baseURL: 'https://api.heroku.com/',
-  headers: {
-    Authorization: `Bearer ${HEROKU_API_KEY}`,
-    Accept: 'application/vnd.heroku+json; version=3'
-  }
-});
-
 const setupPgPool = async () => {
+  const herokuApi = axios.create({
+    baseURL: 'https://api.heroku.com/',
+    headers: {
+      Authorization: `Bearer ${HEROKU_API_KEY}`,
+      Accept: 'application/vnd.heroku+json; version=3'
+    }
+  });
+
   const herokuRes = await herokuApi.get(`addons/${HEROKU_POSTGRES_ID}/config`);
   const pgConnStr = herokuRes.data[0].value;
-  const parsedConnStr = parse(pgConnStr);
+  const { host, password, user, database, application_name, port } = parse(
+    pgConnStr
+  );
 
   // Use connection string from Heroku API response as a base. Overwrite "max"
   // and "ssl".
-  const pgConfig = {
-    ...parsedConnStr,
-    ...{
-      port: Number(parsedConnStr.port),
-      max: 1,
-      ssl: true
-    }
+  const pgConfig: PoolConfig = {
+    host,
+    password,
+    user,
+    application_name,
+    port: Number(port),
+    max: 1,
+    ssl: true,
+    database: database != null ? database : undefined
   };
 
   pgPool = new pg.Pool(pgConfig);
