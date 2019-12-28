@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, Box } from 'rebass/styled-components';
-import { TextField, Badge, CircleButton } from '../../../../design-system';
+import { TextField, Badge, CircleButton, Flex, Box } from 'src/design-system';
 
 interface PagesInputGroupProps {
   addedPages: number[];

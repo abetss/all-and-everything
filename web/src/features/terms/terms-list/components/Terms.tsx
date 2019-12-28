@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex } from 'rebass/styled-components';
-import { ListItem } from '../../../../design-system';
+import { ListItem } from 'src/design-system';
 
 interface TermsProps {
   terms: Array<any>;

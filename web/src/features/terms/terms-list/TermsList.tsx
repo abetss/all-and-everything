@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Flex } from 'rebass/styled-components';
 import { useTerms } from './utils';
 import { TermsSearch, Terms } from './components';
-import { SidePageHeading, CircleButton } from '../../../design-system/components';
+import { SidePageHeading, CircleButton } from 'src/design-system/components';
 import { Link } from 'react-router-dom';
 
 export const TermsList = ({ terms }: any, title: string, pageView: string) => {

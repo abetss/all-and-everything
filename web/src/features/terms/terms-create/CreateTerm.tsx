@@ -1,7 +1,6 @@
 import React from 'react';
-import { Flex } from 'rebass/styled-components';
 import { PagesInputGroup } from './components';
-import { TextField, Button } from '../../../design-system';
+import { TextField, Button, Flex } from 'src/design-system';
 
 export const CreateTerm = (props: any): any => {
   return (

@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,17 +17,36 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "."
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "paths": {
-    "@material-ui/core": ["./material-ui/src"],
-    "@material-ui/core/*": ["./material-ui/src/*"],
-    "@material-ui/lab": ["./material-ui-lab/src"],
-    "@material-ui/lab/*": ["./material-ui-lab/src/*"],
-    "@material-ui/styles": ["./material-ui-styles/src"],
-    "@material-ui/styles/*": ["./material-ui-styles/src/*"],
-    "@material-ui/system": ["./material-ui-system/src"],
-    "@material-ui/types": ["./material-ui-types"]
+    "@material-ui/core": [
+      "./material-ui/src"
+    ],
+    "@material-ui/core/*": [
+      "./material-ui/src/*"
+    ],
+    "@material-ui/lab": [
+      "./material-ui-lab/src"
+    ],
+    "@material-ui/lab/*": [
+      "./material-ui-lab/src/*"
+    ],
+    "@material-ui/styles": [
+      "./material-ui-styles/src"
+    ],
+    "@material-ui/styles/*": [
+      "./material-ui-styles/src/*"
+    ],
+    "@material-ui/system": [
+      "./material-ui-system/src"
+    ],
+    "@material-ui/types": [
+      "./material-ui-types"
+    ]
   }
 }
