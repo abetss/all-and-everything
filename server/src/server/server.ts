@@ -1,4 +1,4 @@
-import { ApolloServer } from 'apollo-server';
+import { ApolloServer } from 'apollo-server-lambda';
 
 import { makeExecutableSchema } from 'graphql-tools';
 import { resolvers } from './resolvers';
@@ -6,26 +6,33 @@ import { typeDefs } from './typedefs';
 import { schemaLogger } from './utils';
 import { createStore, DatabaseAPI } from '../data-sources/db';
 
-export const startServer = () => {
-	const store = createStore();
+export const createServer = () => {
+  const store = createStore();
 
-	// set up any dataSources our resolvers need
-	const dataSources = () => ({
-		databaseApi: new DatabaseAPI({ store })
-	});
+  // set up any dataSources our resolvers need
+  const dataSources = () => ({
+    databaseApi: new DatabaseAPI({ store })
+  });
 
-	const schema = makeExecutableSchema({
-		typeDefs,
-		resolvers,
-		logger: schemaLogger
-	});
+  const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers,
+    logger: schemaLogger
+  });
 
-	const server = new ApolloServer({
-		schema,
-		dataSources
-	});
+  const server = new ApolloServer({
+    schema,
+    dataSources,
+    context: ({ event, context }) => ({
+      headers: event.headers,
+      functionName: context.functionName,
+      event,
+      context
+    }),
+    tracing: true,
+    playground: true,
+    introspection: true
+  });
 
-	server.listen().then(({ url }) => {
-		console.log(`🚀  Server ready at ${url}`);
-	});
+  return server;
 };
