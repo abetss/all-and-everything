@@ -14,7 +14,7 @@ export const TermsSearch = ({ onChange }: TermsSearchProps) => (
       type="search"
       margin="normal"
       variant="outlined"
-      onChange={(event: React.ChangeEvent<HTMLSelectElement>) => onChange(event.target.value)}
+      onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => onChange(event.target.value)}
     />
   </Box>
 );

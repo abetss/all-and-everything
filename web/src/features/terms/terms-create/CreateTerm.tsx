@@ -13,7 +13,7 @@ export const CreateTerm = (props: any): any => {
           type="text"
           margin="none"
           value={props.term}
-          onChange={(event: React.ChangeEvent<HTMLSelectElement>) => props.onTermChange(event.target.value)}
+          onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => props.onTermChange(event.target.value)}
         />
       </Flex>
 

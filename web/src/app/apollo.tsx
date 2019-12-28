@@ -6,9 +6,7 @@ import { onError } from 'apollo-link-error';
 
 const errorLink = onError(({ graphQLErrors, networkError, operation }) => {
   if (graphQLErrors) {
-    graphQLErrors.forEach(({ message, path }) =>
-      console.log(`[GraphQL error]: Message: ${message}, Path: ${path}`),
-    );
+    graphQLErrors.forEach(({ message, path }) => console.log(`[GraphQL error]: Message: ${message}, Path: ${path}`));
   }
 
   if (networkError) {
@@ -21,7 +19,7 @@ export const createClient = () => {
 
   // TODO: pull this from .env
   const httpLink = new HttpLink({
-    uri: `http://localhost:4000/`,
+    uri: `http://localhost:4000/graphql`,
   });
 
   const client = new ApolloClient({

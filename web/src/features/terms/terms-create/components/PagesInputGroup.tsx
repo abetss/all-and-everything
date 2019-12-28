@@ -8,11 +8,7 @@ interface PagesInputGroupProps {
   onRemovePageClick: (pageNumber: number) => void;
 }
 
-export const PagesInputGroup = ({
-  addedPages,
-  onAddPageClicked,
-  onRemovePageClick,
-}: PagesInputGroupProps) => {
+export const PagesInputGroup = ({ addedPages, onAddPageClicked, onRemovePageClick }: PagesInputGroupProps) => {
   const [page, setPage] = useState('');
 
   return (
@@ -23,7 +19,7 @@ export const PagesInputGroup = ({
         type="number"
         margin="none"
         value={page}
-        onChange={(event: React.ChangeEvent<HTMLSelectElement>) => setPage(event.target.value)}
+        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => setPage(event.target.value)}
       />
       <Box ml={3} pb={1}>
         <CircleButton
