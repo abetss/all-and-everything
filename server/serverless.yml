@@ -5,10 +5,11 @@ provider:
   profile: personal
   runtime: nodejs12.x
 
-package:
-  individually: true
+# package:
+#   individually: true
 
 plugins:
+  - serverless-dotenv-plugin
   - serverless-webpack
   - serverless-offline
 

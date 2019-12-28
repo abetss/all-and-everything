@@ -13,9 +13,6 @@
     "schema:validate": "npx apollo service:check"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-typescript": "^7.7.7",
     "@types/aws-lambda": "^8.10.39",
     "@types/aws-sdk": "^2.7.0",
     "@types/dotenv": "^8.2.0",
@@ -25,10 +22,9 @@
     "@types/pg": "^7.14.0",
     "@types/pg-connection-string": "^2.0.0",
     "@types/ramda": "^0.26.9",
-    "babel-loader": "^8.0.6",
-    "cache-loader": "^4.1.0",
     "fork-ts-checker-webpack-plugin": "^4.0.0-beta.4",
     "nodemon": "^1.19.1",
+    "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.12.1",
     "serverless-plugin-typescript": "^1.1.9",
     "serverless-webpack": "^5.3.1",

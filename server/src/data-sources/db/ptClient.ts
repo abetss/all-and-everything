@@ -7,8 +7,6 @@ import { HEROKU_API_KEY, HEROKU_POSTGRES_ID } from 'src/core/constants';
 let pgPool;
 
 const setupPgPool = async () => {
-  console.log('HEROKU_API_KEY', HEROKU_API_KEY);
-  console.log('HEROKU_POSTGRES_ID', HEROKU_POSTGRES_ID);
   const herokuApi = axios.create({
     baseURL: 'https://api.heroku.com/',
     headers: {

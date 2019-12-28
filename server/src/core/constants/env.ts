@@ -1,6 +1,4 @@
-import * as dotenv from 'dotenv';
-
-dotenv.config();
+require('dotenv').config();
 // let path;
 
 // switch (process.env.NODE_ENV) {
