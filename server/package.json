@@ -9,7 +9,7 @@
     "build": "tsc",
     "deploy": "sls deploy",
     "serve": "sls offline start",
-    "schema:push": "npx apollo service:push --endpoint=http://localhost:4000",
+    "schema:push": "npx apollo service:push --endpoint=http://localhost:4000/graphql",
     "schema:validate": "npx apollo service:check"
   },
   "devDependencies": {
