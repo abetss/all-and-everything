@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "sls offline start",
+    "start": "yarn serve",
     "build": "tsc",
     "deploy": "sls deploy",
     "serve": "sls offline start",

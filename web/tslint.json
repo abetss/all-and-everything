@@ -3,7 +3,7 @@
   "rules": {
     "interface-over-type-literal": false,
     "variable-name": false,
-    "interface-name": ["never-prefix"],
+    "interface-name": [true, "always-prefix"],
     "jsx-boolean-value": false,
     "object-literal-sort-keys": false,
     "newspaper-order": false,
