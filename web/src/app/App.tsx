@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
-import { theme } from '../design-system';
+import { theme, Page } from 'src/design-system';
 import NoSsr from '@material-ui/core/NoSsr';
 import { Routes } from './routes';
 import { createClient } from './apollo';
@@ -26,7 +26,9 @@ export default class App extends React.PureComponent {
         <ThemeProvider theme={theme}>
           <ApolloProvider client={client}>
             <ApolloHooksProvider client={client}>
-              <Routes />
+              <Page>
+                <Routes />
+              </Page>
             </ApolloHooksProvider>
           </ApolloProvider>
         </ThemeProvider>
