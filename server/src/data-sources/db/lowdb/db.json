@@ -5,7 +5,395 @@
     "lastName": "Tang",
     "email": "elvis.tang@gmail.co"
   },
+  "indexTerm" : [
+  {
+    "id": "93c166f3-1b20-4b3f-8624",
+    "parentTerm": null,
+    "indexEdition": "Guides and Index - Second Edition",
+    "editions": {
+      "english1950": {
+        "title": "Atarnakh",
+        "pronunciation": {
+          "phonetic": "Atarnɪkh",
+          "spelling": null,
+          "sound": null
+        },
+        "associations": [
+          {
+            "type": "reference",
+            "quotation": "And everything subsequent came about through the influence of a then very famous philosopher, Atarnakh, and his theory expounded by him in a treatise under the title: ‘Why do Wars Occur on the Earth?the Judgment Seat Above, Whence Objective justice proceeds",
+            "terms": [
+              {
+                "id": "93c166f1-1b20-4b3f-8624",
+                "title": "Objective"
+              },
+              {
+                "id": "93c166f10-1b20-4b3f-8624",
+                "title": "Atarnakh"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [220],
+              "specialPages": [{ "page": 220, "type":"f"}]
+            }
+          },
+          {
+            "type": "reference",
+            "quotation": "When this philosopher made his appearance among the members of this society, all their notions were confounded",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [1049],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "reference",
+            "quotation": "omni Atarnakh",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [1049, 1051, 1120],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "seelAlso",
+            "quotation": null,
+            "terms": [
+              {
+                "id": "93c166f3-1b20-4b3f-8622",
+                "title": "Above"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "see",
+            "quotation": null,
+            "terms": [
+              {
+                "id": "93c166f3-1b20-4b3f-8622",
+                "title": "change this to the 3rd term"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "and",
+            "quotation": "I am very sincerely grieved that I have unintentionally been the cause of the dissolution of this great philanthropic undertaking, into which you, the most honorable and wise of all the countries of the Earth, have for several years put more impartial and unselfish labor than men of the Earth have ever been or ever again will be able to bear for others, that is, for men quite unknown and indifferent to them.",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [1099],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "concerning",
+            "quotation": "The dervish Assadulla Ibrahim Ogly began his activities there only some thirty or forty terrestrial years ago",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [109],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "considerAlso",
+            "quotation": "During that said period, not only did their rate of ‘mortality’ begin to decline, but what they call their birth rate also began to decline.",
+            "terms": [
+              {
+                "id": "93c166f3-1b11-1b3f-8622",
+                "title": "mortality"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [1005],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "used",
+            "quotation": "During that said period",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [95],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "usedThroughOutSuchPhrasesAs",
+            "quotation": "period",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [500, 506,700, 200],
+              "specialPages": []
+            }
+          }
+        ],
+        "usedThroughOut": false
+      },
+      "english1992": {
+        "title": "Atarnakh",
+        "pronunciation": {
+          "phonetic": "Atarnɪkh",
+          "spelling": null,
+          "sound": null
+        },
+        "associations": [
+          {
+            "type": "reference",
+            "quotation": "And everything subsequent came about through the influence of a then very famous philosopher, Atarnakh, and his theory expounded by him in a treatise under the title: ‘Why do Wars Occur on the Earth?the Judgment Seat Above, Whence Objective justice proceeds",
+            "terms": [
+              {
+                "id": "93c166f1-1b20-4b3f-8624",
+                "title": "Objective"
+              },
+              {
+                "id": "93c166f10-1b20-4b3f-8624",
+                "title": "Atarnakh"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [220],
+              "specialPages": [{ "page": 220, "type":"f"}]
+            }
+          },
+          {
+            "type": "reference",
+            "quotation": "When this philosopher made his appearance among the members of this society, all their notions were confounded",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [1049],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "reference",
+            "quotation": "omni Atarnakh",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [1049, 1051, 1120],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "seelAlso",
+            "quotation": null,
+            "terms": [
+              {
+                "id": "93c166f3-1b20-4b3f-8622",
+                "title": "Above"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "see",
+            "quotation": null,
+            "terms": [
+              {
+                "id": "93c166f3-1b20-4b3f-8622",
+                "title": "change this to the 3rd term"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "and",
+            "quotation": "I am very sincerely grieved that I have unintentionally been the cause of the dissolution of this great philanthropic undertaking, into which you, the most honorable and wise of all the countries of the Earth, have for several years put more impartial and unselfish labor than men of the Earth have ever been or ever again will be able to bear for others, that is, for men quite unknown and indifferent to them.",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [1099],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "concerning",
+            "quotation": "The dervish Assadulla Ibrahim Ogly began his activities there only some thirty or forty terrestrial years ago",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [109],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "considerAlso",
+            "quotation": "During that said period, not only did their rate of ‘mortality’ begin to decline, but what they call their birth rate also began to decline.",
+            "terms": [
+              {
+                "id": "93c166f3-1b11-1b3f-8622",
+                "title": "mortality"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [1005],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "used",
+            "quotation": "During that said period",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [95],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "usedThroughOutSuchPhrasesAs",
+            "quotation": "period",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [500, 506,700, 200],
+              "specialPages": []
+            }
+          }
+        ],
+        "usedThroughOut": false
+      }
+    },
+    "otherPronunciations": {
+      "russian": {
+        "transcription": "цйк-ппо-оожюж",
+        "spelling": null,
+        "sound": null
+      },
+      "french": {
+        "transcription": "fàkjtesdt",
+        "spelling": null,
+        "sound": null
+      }
+    }
+  },
+  {
+    "id": "93c166f3-1b20-4b3f-8622",
+    "parentTerm": null,
+    "indexEdition": "Guides and Index - Second Edition",
+    "editions": {
+      "english1950": {
+        "title": "Above",
+        "pronunciation": null,
+        "associations": [
+          {
+            "type": "reference",
+            "quotation": "the Judgment Seat Above, Whence Objective justice proceeds",
+            "terms": [
+              {
+                "id": 10,
+                "title": "Objective"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [27],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "reference",
+            "quotation": "the foundation of this Most Great Greatness is there Above",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [24],
+              "specialPages": []
+            }
+          }
+        ],
+        "usedThroughOut": false
+      },
+      "english1992": {
+        "title": "Above",
+        "pronunciation": null,
+        "associations": [
+          {
+            "type": "reference",
+            "quotation": "the Judgment Seat Above, Whence Objective justice proceeds",
+            "terms": [
+              {
+                "id": 10,
+                "title": "Objective"
+              }
+            ],
+            "pages": {
+              "pageNumbers": [24],
+              "specialPages": []
+            }
+          },
+          {
+            "type": "reference",
+            "quotation": "the foundation of this Most Great Greatness is there Above",
+            "terms": [],
+            "pages": {
+              "pageNumbers": [225],
+              "specialPages": []
+            }
+          }
+        ],
+        "usedThroughOut": false
+      }
+    },
+    "otherPronunciations": null
+  }
+],
   "term": [
+  {
+    "id": 1,
+    "title": "Mike",
+    "pronunciation" : null,
+    "pages": [
+      686,
+      12,
+      100
+    ],
+    "tags": [],
+    "notes": [],
+    "createdBy": null,
+    "createdAt": "4123131"
+  },
+  {
+    "id": 2,
+    "title": "Whiskey",
+    "pages": [
+      197,
+      971,
+      280,
+      1274,
+      808,
+      315,
+      524,
+      839,
+      430,
+      115
+    ],
+    "tags": [],
+    "notes": [],
+    "createdBy": null,
+    "createdAt": "4123132"
+  },
+  {
+    "id": 3,
+    "title": "India",
+    "pages": [
+      222,
+      11,
+      100
+    ],
+    "tags": [],
+    "notes": [],
+    "createdBy": null,
+    "createdAt": "4123133"
+  }
+],
+  "rawTerm": [
     {"id":1, "title":"Mike","pages":[686, 12, 100],"tags" : [], "notes": [], "createdBy": null, "createdAt": "4123131"},
     {"id":2, "title":"Whiskey","pages":[197,971,280,1274,808,315,524,839,430,115],"tags" : [], "notes": [], "createdBy": null, "createdAt": "4123132"},
     {"id":3, "title":"India","pages":[222, 11, 100],"tags" : [], "notes": [], "createdBy": null, "createdAt": "4123133"}
