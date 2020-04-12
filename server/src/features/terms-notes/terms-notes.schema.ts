@@ -37,6 +37,7 @@ export const termsNotesResolvers = {
       { dataSources: { databaseApi } }: any
     ) => {
       const allTerms: Term[] = await databaseApi.getAllTerms();
+      console.log('allTerms', JSON.stringify(allTerms, null, 2));
 
       // TODO: create a generic pagination logic
       const paginableTerms = allTerms.map(item => ({

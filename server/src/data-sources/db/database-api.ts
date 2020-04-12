@@ -1,6 +1,13 @@
 import { DataSource } from 'apollo-datasource';
 import { Term } from '../../features/terms-notes';
 
+interface IModel {
+	terms: {
+		findAll: Term[],
+
+	}
+}
+
 export class DatabaseAPI extends DataSource {
 	private store: any;
 	private context: any;

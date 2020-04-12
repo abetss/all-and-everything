@@ -7,12 +7,12 @@
 // ====================================================
 
 export interface term_term_notes {
-  __typename: "Note";
+  __typename: 'Note';
   text: string | null;
 }
 
 export interface term_term {
-  __typename: "Term";
+  __typename: 'Term';
   title: string | null;
   notes: (term_term_notes | null)[];
   pages: (number | null)[];
