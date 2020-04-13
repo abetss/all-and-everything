@@ -1,4 +1,5 @@
 import { authTypeDefs } from '../features/auth';
+import { indexTermsTypeDefs } from '../features/index-terms';
 import { termsNotesTypeDefs } from '../features/terms-notes';
 
 const rawQuery = `
@@ -7,4 +8,4 @@ const rawQuery = `
   }
 `;
 
-export const typeDefs = [rawQuery, termsNotesTypeDefs, authTypeDefs];
+export const typeDefs = [rawQuery, termsNotesTypeDefs, authTypeDefs, indexTermsTypeDefs];
