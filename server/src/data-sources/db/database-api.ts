@@ -1,11 +1,5 @@
 import { DataSource } from 'apollo-datasource';
-import { Term } from '../../features/terms-notes';
-
-interface IModel {
-  terms: {
-    findAll: Term[];
-  };
-}
+import { TermNote } from '../../features/terms-notes';
 
 export class DatabaseAPI extends DataSource {
   private store: any;
@@ -26,6 +20,7 @@ export class DatabaseAPI extends DataSource {
     this.context = config.context;
   }
 
+  // TODO: refactor this part to eliminate the need to call findAll for every model
   async getAllIndexTerms(): Promise<Index.Term[]> {
     const allTerms: Index.Term[] = await this.store.indexTerm.findAll();
     return allTerms;
@@ -36,13 +31,13 @@ export class DatabaseAPI extends DataSource {
     return term;
   }
 
-  async getAllTerms(): Promise<Term[]> {
-    const allTerms: Term[] = await this.store.terms.findAll();
+  async getAllTerms(): Promise<TermNote[]> {
+    const allTerms: TermNote[] = await this.store.terms.findAll();
     return allTerms;
   }
 
-  async findTerm(id: number): Promise<Term> {
-    const term: Term = await this.store.terms.findById(id);
+  async findTerm(id: number): Promise<TermNote> {
+    const term: TermNote = await this.store.terms.findById(id);
     return term;
   }
 }

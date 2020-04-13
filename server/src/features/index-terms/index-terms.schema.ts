@@ -1,7 +1,5 @@
-import { Pronunciation } from './index-terms.types';
-// import { IndexTerm } from './index-terms.types';
 import { gql } from 'apollo-server-lambda';
-import { paginateResults } from '../../core/utils';
+import { paginateResults } from 'src/core/utils';
 
 export const indexTermsTypeDefs = gql`
   extend type Query {
@@ -91,7 +89,6 @@ export const indexTermsResolvers = {
   Query: {
     interTerms: async (_: any, { pageSize, after }: any, { dataSources: { databaseApi } }: any) => {
       const allIndexTerms: Index.Term[] = await databaseApi.getAllIndexTerms();
-      console.log('allIndexTerms', JSON.stringify(allIndexTerms, null, 2));
 
       const paginableTerms = allIndexTerms.map(item => ({
         ...item,
