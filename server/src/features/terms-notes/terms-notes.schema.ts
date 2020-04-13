@@ -4,11 +4,11 @@ import { TermNote } from './terms-notes.types';
 
 export const termsNotesTypeDefs = gql`
   extend type Query {
-    termNotes(pageSize: Int, after: String): TermsConnection!
+    termNotes(pageSize: Int, after: String): TermNotesConnection!
     termNote(id: Int): TermNote!
   }
 
-  type TermsConnection {
+  type TermNotesConnection {
     cursor: String!
     hasMore: Boolean!
     list: [TermNote!]!

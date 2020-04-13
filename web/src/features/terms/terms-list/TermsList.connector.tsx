@@ -6,7 +6,7 @@ import { getTerms, getTermsVariables } from './graphqlGenTypes/getTerms';
 
 const TERMS_QUERY = gql`
   query getTerms($pageSize: Int, $after: String) {
-    terms(pageSize: $pageSize, after: $after) {
+    termNotes(pageSize: $pageSize, after: $after) {
       cursor
       hasMore
       list {
@@ -27,7 +27,7 @@ export const TermsListConnector = () => {
   }
 
   const {
-    terms: { list },
+    termNotes: { list },
   } = data;
 
   return <TermsList terms={list} />;

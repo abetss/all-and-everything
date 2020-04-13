@@ -4,9 +4,9 @@ import { useTerms } from './utils';
 import { TermsSearch, Terms } from './components';
 import { SidePageHeading, CircleButton } from 'src/design-system/components';
 import { Link } from 'react-router-dom';
-import { getTerms_terms_list } from './graphqlGenTypes/getTerms';
+import { getTerms_termNotes_list } from './graphqlGenTypes/getTerms';
 interface TermsListProps {
-  terms: getTerms_terms_list[];
+  terms: getTerms_termNotes_list[];
 }
 
 export const TermsList = ({ terms }: TermsListProps) => {

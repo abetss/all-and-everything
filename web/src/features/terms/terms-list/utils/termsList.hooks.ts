@@ -1,12 +1,12 @@
 import { useState, useCallback } from 'react';
 import { findStringMatch } from 'src/core/utils';
 import { useQueryParam, NumberParam } from 'use-query-params';
-import { getTerms_terms_list } from './../graphqlGenTypes/getTerms';
+import { getTerms_termNotes_list } from './../graphqlGenTypes/getTerms';
 
 export const useTerms = (
-  terms: getTerms_terms_list[],
+  terms: getTerms_termNotes_list[],
 ): [
-  getTerms_terms_list[],
+  getTerms_termNotes_list[],
   (newValue: number, updateType?: 'replace' | 'replaceIn' | 'push' | 'pushIn') => void,
   number,
   (input: string) => void,

@@ -8,8 +8,8 @@ interface TermDetailConnectorProps {
 }
 
 const FIND_TERM_QUERY = gql`
-  query term($id: Int) {
-    term(id: $id) {
+  query getTermNote($id: Int) {
+    termNote(id: $id) {
       title
       notes {
         text
@@ -32,7 +32,7 @@ export const TermDetailConnector = ({ id }: TermDetailConnectorProps) => {
     return <div>Error! {error.message}</div>;
   }
 
-  const { term } = data;
+  const { termNote } = data;
 
-  return <TermDetail term={term} />;
+  return <TermDetail term={termNote} />;
 };

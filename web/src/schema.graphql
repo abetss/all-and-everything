@@ -32,17 +32,91 @@ directive @connection(
   filter: [String!]
 ) on FIELD
 
+type Association {
+  type: String!
+  quotation: String
+  terms: [TermReference!]!
+  pages: Pages
+}
+
+type Dictionary {
+  description: String
+  subWords: [SubWord]!
+  otherLangs: [OtherLang!]!
+}
+
+type IndexGuide {
+  parentTerm: ID
+  editions: IndexGuideEditions!
+  inOtherLangs: [Pronunciation!]!
+}
+
+type IndexGuideEditions {
+  english1950: TermInfo
+  english1992: TermInfo
+}
+
+type IndexTerm {
+  id: ID!
+  title: String!
+  indexGuide: IndexGuide
+  dictionary: Dictionary
+}
+
+type IndexTermsConnection {
+  cursor: String!
+  hasMore: Boolean!
+  list: [IndexTerm!]!
+}
+
 type Note {
   text: String
 }
 
-type Query {
-  _empty: String
-  terms(pageSize: Int, after: String): TermsConnection!
-  term(id: Int): Term!
+type OtherLang {
+  lang: String
+  spelling: String
 }
 
-type Term {
+type Pages {
+  pageNumbers: [Int]!
+  specialPages: [SpecialPage!]!
+}
+
+type Pronunciation {
+  spelling: String
+  phonetic: String
+  sound: String
+  lang: String
+}
+
+type Query {
+  _empty: String
+  termNotes(pageSize: Int, after: String): TermNotesConnection!
+  termNote(id: Int): TermNote!
+  interTerms(pageSize: Int, after: String): IndexTermsConnection!
+  indexTerm(id: ID): IndexTerm!
+}
+
+type SpecialPage {
+  page: Int!
+  type: String!
+}
+
+type SubWord {
+  word: String
+  description: String
+  lang: String
+}
+
+type TermInfo {
+  title: String!
+  pronunciation: Pronunciation
+  associations: [Association!]!
+  usedThroughOut: Boolean!
+}
+
+type TermNote {
   id: ID!
   title: String
   author: User
@@ -51,10 +125,15 @@ type Term {
   tags: [String!]!
 }
 
-type TermsConnection {
+type TermNotesConnection {
   cursor: String!
   hasMore: Boolean!
-  list: [Term!]!
+  list: [TermNote!]!
+}
+
+type TermReference {
+  id: ID!
+  title: String!
 }
 
 type User {

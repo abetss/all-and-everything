@@ -6,21 +6,21 @@
 // GraphQL query operation: getTerms
 // ====================================================
 
-export interface getTerms_terms_list {
-  __typename: "Term";
+export interface getTerms_termNotes_list {
+  __typename: "TermNote";
   id: string;
   title: string | null;
 }
 
-export interface getTerms_terms {
-  __typename: "TermsConnection";
+export interface getTerms_termNotes {
+  __typename: "TermNotesConnection";
   cursor: string;
   hasMore: boolean;
-  list: getTerms_terms_list[];
+  list: getTerms_termNotes_list[];
 }
 
 export interface getTerms {
-  terms: getTerms_terms;
+  termNotes: getTerms_termNotes;
 }
 
 export interface getTermsVariables {
