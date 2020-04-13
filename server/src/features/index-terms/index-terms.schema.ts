@@ -1,3 +1,4 @@
+import { Pronunciation } from './index-terms.types';
 // import { IndexTerm } from './index-terms.types';
 import { gql } from 'apollo-server-lambda';
 import { paginateResults } from '../../core/utils';
@@ -12,12 +13,6 @@ export const indexTermsTypeDefs = gql`
     cursor: String!
     hasMore: Boolean!
     list: [IndexTerm!]!
-  }
-
-  type Pronunciation {
-    phonetic: String
-    spelling: String
-    sound: String
   }
 
   type TermReference {
@@ -49,28 +44,46 @@ export const indexTermsTypeDefs = gql`
     usedThroughOut: Boolean!
   }
 
-  type Editions {
+  type IndexGuideEditions {
     english1950: TermInfo
     english1992: TermInfo
   }
 
-  type OtherPronunciation {
-    transcription: String
+  type Pronunciation {
     spelling: String
+    phonetic: String
     sound: String
+    lang: String
   }
 
-  type OtherPronunciations {
-    russian: OtherPronunciation
-    french: OtherPronunciation
+  type SubWord {
+    word: String
+    description: String
+    lang: String
+  }
+
+  type OtherLang {
+    lang: String
+    spelling: String
+  }
+
+  type Dictionary {
+    description: String
+    subWords: [SubWord]!
+    otherLangs: [OtherLang!]!
+  }
+
+  type IndexGuide {
+    parentTerm: ID
+    editions: IndexGuideEditions!
+    inOtherLangs: [Pronunciation!]!
   }
 
   type IndexTerm {
     id: ID!
-    parentTerm: ID
-    source: String!
-    editions: Editions!
-    otherPronunciations: OtherPronunciations
+    title: String!
+    indexGuide: IndexGuide
+    dictionary: Dictionary
   }
 `;
 
@@ -90,8 +103,6 @@ export const indexTermsResolvers = {
       return {
         list: paginatedTerms,
         cursor: paginatedTerms.length ? paginatedTerms[paginatedTerms.length - 1].cursor : null,
-        // if the cursor of the end of the paginated results is the same as the
-        // last item in _all_ results, then there are no more results after this
         hasMore: paginatedTerms.length
           ? paginatedTerms[paginatedTerms.length - 1].cursor !== paginableTerms[paginableTerms.length - 1].cursor
           : false,

@@ -5,467 +5,524 @@
     "lastName": "Tang",
     "email": "elvis.tang@gmail.co"
   },
-  "indexTerm" : [
-  {
-    "id": "93c166f3-1b20-4b3f-8624",
-    "parentTerm": null,
-    "source": "Guides and Index - Second Edition",
-    "editions": {
-      "english1950": {
-        "title": "Atarnakh",
-        "pronunciation": {
-          "phonetic": "Atarnɪkh",
-          "spelling": null,
-          "sound": null
-        },
-        "associations": [
-          {
-            "type": "reference",
-            "quotation": "And everything subsequent came about through the influence of a then very famous philosopher, Atarnakh, and his theory expounded by him in a treatise under the title: ‘Why do Wars Occur on the Earth?the Judgment Seat Above, Whence Objective justice proceeds",
-            "terms": [
+  "indexTerm": [
+    {
+      "id": "93c166f3-1b20-4b3f-8624",
+      "title": "Atarnakh",
+      "indexGuide": {
+        "parentTerm": null,
+        "editions": {
+          "english1950": {
+            "title": "Atarnakh",
+            "pronunciation": {
+              "phonetic": "Atarnɪkh",
+              "spelling": null,
+              "sound": null
+            },
+            "associations": [
               {
-                "id": "93c166f1-1b20-4b3f-8624",
-                "title": "Objective"
+                "type": "reference",
+                "quotation": "And everything subsequent came about through the influence of a then very famous philosopher, Atarnakh, and his theory expounded by him in a treatise under the title: ‘Why do Wars Occur on the Earth?the Judgment Seat Above, Whence Objective justice proceeds",
+                "terms": [
+                  {
+                    "id": "93c166f1-1b20-4b3f-8624",
+                    "title": "Objective"
+                  },
+                  {
+                    "id": "93c166f10-1b20-4b3f-8624",
+                    "title": "Atarnakh"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [220],
+                  "specialPages": [{ "page": 220, "type": "f" }]
+                }
               },
               {
-                "id": "93c166f10-1b20-4b3f-8624",
-                "title": "Atarnakh"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [220],
-              "specialPages": [{ "page": 220, "type":"f"}]
-            }
-          },
-          {
-            "type": "reference",
-            "quotation": "When this philosopher made his appearance among the members of this society, all their notions were confounded",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [1049],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "reference",
-            "quotation": "omni Atarnakh",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [1049, 1051, 1120],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "seelAlso",
-            "quotation": null,
-            "terms": [
+                "type": "reference",
+                "quotation": "When this philosopher made his appearance among the members of this society, all their notions were confounded",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [1049],
+                  "specialPages": []
+                }
+              },
               {
-                "id": "93c166f3-1b20-4b3f-8622",
-                "title": "Above"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "see",
-            "quotation": null,
-            "terms": [
+                "type": "reference",
+                "quotation": "omni Atarnakh",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [1049, 1051, 1120],
+                  "specialPages": []
+                }
+              },
               {
-                "id": "93c166f3-1b20-4b3f-8622",
-                "title": "change this to the 3rd term"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "and",
-            "quotation": "I am very sincerely grieved that I have unintentionally been the cause of the dissolution of this great philanthropic undertaking, into which you, the most honorable and wise of all the countries of the Earth, have for several years put more impartial and unselfish labor than men of the Earth have ever been or ever again will be able to bear for others, that is, for men quite unknown and indifferent to them.",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [1099],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "concerning",
-            "quotation": "The dervish Assadulla Ibrahim Ogly began his activities there only some thirty or forty terrestrial years ago",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [109],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "considerAlso",
-            "quotation": "During that said period, not only did their rate of ‘mortality’ begin to decline, but what they call their birth rate also began to decline.",
-            "terms": [
+                "type": "seelAlso",
+                "quotation": null,
+                "terms": [
+                  {
+                    "id": "93c166f3-1b20-4b3f-8622",
+                    "title": "Above"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [],
+                  "specialPages": []
+                }
+              },
               {
-                "id": "93c166f3-1b11-1b3f-8622",
-                "title": "mortality"
+                "type": "see",
+                "quotation": null,
+                "terms": [
+                  {
+                    "id": "93c166f3-1b20-4b3f-8622",
+                    "title": "change this to the 3rd term"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "and",
+                "quotation": "I am very sincerely grieved that I have unintentionally been the cause of the dissolution of this great philanthropic undertaking, into which you, the most honorable and wise of all the countries of the Earth, have for several years put more impartial and unselfish labor than men of the Earth have ever been or ever again will be able to bear for others, that is, for men quite unknown and indifferent to them.",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [1099],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "concerning",
+                "quotation": "The dervish Assadulla Ibrahim Ogly began his activities there only some thirty or forty terrestrial years ago",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [109],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "considerAlso",
+                "quotation": "During that said period, not only did their rate of ‘mortality’ begin to decline, but what they call their birth rate also began to decline.",
+                "terms": [
+                  {
+                    "id": "93c166f3-1b11-1b3f-8622",
+                    "title": "mortality"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [1005],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "used",
+                "quotation": "During that said period",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [95],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "usedThroughOutSuchPhrasesAs",
+                "quotation": "period",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [500, 506, 700, 200],
+                  "specialPages": []
+                }
               }
             ],
-            "pages": {
-              "pageNumbers": [1005],
-              "specialPages": []
-            }
+            "usedThroughOut": false
           },
-          {
-            "type": "used",
-            "quotation": "During that said period",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [95],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "usedThroughOutSuchPhrasesAs",
-            "quotation": "period",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [500, 506,700, 200],
-              "specialPages": []
-            }
+          "english1992": {
+            "title": "Atarnakh",
+            "pronunciation": {
+              "phonetic": "Atarnɪkh",
+              "spelling": null,
+              "sound": null
+            },
+            "associations": [
+              {
+                "type": "reference",
+                "quotation": "And everything subsequent came about through the influence of a then very famous philosopher, Atarnakh, and his theory expounded by him in a treatise under the title: ‘Why do Wars Occur on the Earth?the Judgment Seat Above, Whence Objective justice proceeds",
+                "terms": [
+                  {
+                    "id": "93c166f1-1b20-4b3f-8624",
+                    "title": "Objective"
+                  },
+                  {
+                    "id": "93c166f10-1b20-4b3f-8624",
+                    "title": "Atarnakh"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [220],
+                  "specialPages": [{ "page": 220, "type": "f" }]
+                }
+              },
+              {
+                "type": "reference",
+                "quotation": "When this philosopher made his appearance among the members of this society, all their notions were confounded",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [1049],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "reference",
+                "quotation": "omni Atarnakh",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [1049, 1051, 1120],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "seelAlso",
+                "quotation": null,
+                "terms": [
+                  {
+                    "id": "93c166f3-1b20-4b3f-8622",
+                    "title": "Above"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "see",
+                "quotation": null,
+                "terms": [
+                  {
+                    "id": "93c166f3-1b20-4b3f-8622",
+                    "title": "change this to the 3rd term"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "and",
+                "quotation": "I am very sincerely grieved that I have unintentionally been the cause of the dissolution of this great philanthropic undertaking, into which you, the most honorable and wise of all the countries of the Earth, have for several years put more impartial and unselfish labor than men of the Earth have ever been or ever again will be able to bear for others, that is, for men quite unknown and indifferent to them.",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [1099],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "concerning",
+                "quotation": "The dervish Assadulla Ibrahim Ogly began his activities there only some thirty or forty terrestrial years ago",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [109],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "considerAlso",
+                "quotation": "During that said period, not only did their rate of ‘mortality’ begin to decline, but what they call their birth rate also began to decline.",
+                "terms": [
+                  {
+                    "id": "93c166f3-1b11-1b3f-8622",
+                    "title": "mortality"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [1005],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "used",
+                "quotation": "During that said period",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [95],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "usedThroughOutSuchPhrasesAs",
+                "quotation": "period",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [500, 506, 700, 200],
+                  "specialPages": []
+                }
+              }
+            ],
+            "usedThroughOut": false
           }
-        ],
-        "usedThroughOut": false
+        },
+        "inOtherLangs": [
+          {
+            "lang": "russian",
+            "phonetic": "цйк-ппо-оожюж",
+            "spelling": null,
+            "sound": null
+          },
+          {
+            "lang": "french",
+            "phonetic": "fàkjtesdt",
+            "spelling": null,
+            "sound": null
+          }
+        ]
       },
-      "english1992": {
-        "title": "Atarnakh",
-        "pronunciation": {
-          "phonetic": "Atarnɪkh",
-          "spelling": null,
-          "sound": null
-        },
-        "associations": [
+      "dictionary": {
+        "description": "substitute; certain person by whom God continues",
+        "subWords": [
           {
-            "type": "reference",
-            "quotation": "And everything subsequent came about through the influence of a then very famous philosopher, Atarnakh, and his theory expounded by him in a treatise under the title: ‘Why do Wars Occur on the Earth?the Judgment Seat Above, Whence Objective justice proceeds",
-            "terms": [
-              {
-                "id": "93c166f1-1b20-4b3f-8624",
-                "title": "Objective"
-              },
-              {
-                "id": "93c166f10-1b20-4b3f-8624",
-                "title": "Atarnakh"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [220],
-              "specialPages": [{ "page": 220, "type":"f"}]
-            }
+            "word": "Pers.",
+            "description": "the world in existence.",
+            "lang": "Persian"
           },
           {
-            "type": "reference",
-            "quotation": "When this philosopher made his appearance among the members of this society, all their notions were confounded",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [1049],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "reference",
-            "quotation": "omni Atarnakh",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [1049, 1051, 1120],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "seelAlso",
-            "quotation": null,
-            "terms": [
-              {
-                "id": "93c166f3-1b20-4b3f-8622",
-                "title": "Above"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "see",
-            "quotation": null,
-            "terms": [
-              {
-                "id": "93c166f3-1b20-4b3f-8622",
-                "title": "change this to the 3rd term"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "and",
-            "quotation": "I am very sincerely grieved that I have unintentionally been the cause of the dissolution of this great philanthropic undertaking, into which you, the most honorable and wise of all the countries of the Earth, have for several years put more impartial and unselfish labor than men of the Earth have ever been or ever again will be able to bear for others, that is, for men quite unknown and indifferent to them.",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [1099],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "concerning",
-            "quotation": "The dervish Assadulla Ibrahim Ogly began his activities there only some thirty or forty terrestrial years ago",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [109],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "considerAlso",
-            "quotation": "During that said period, not only did their rate of ‘mortality’ begin to decline, but what they call their birth rate also began to decline.",
-            "terms": [
-              {
-                "id": "93c166f3-1b11-1b3f-8622",
-                "title": "mortality"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [1005],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "used",
-            "quotation": "During that said period",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [95],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "usedThroughOutSuchPhrasesAs",
-            "quotation": "period",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [500, 506,700, 200],
-              "specialPages": []
-            }
+            "word": "Abdali",
+            "description": "devote",
+            "lang": null
           }
         ],
-        "usedThroughOut": false
+        "inOtherLangs": [
+          {
+            "lang": "russian",
+            "spelling": "Абдил"
+          }
+        ]
       }
     },
-    "otherPronunciations": {
-      "russian": {
-        "transcription": "цйк-ппо-оожюж",
-        "spelling": null,
-        "sound": null
+    {
+      "id": "93c166f3-1b20-4b3f-8622",
+      "title": "Above",
+      "indexGuide": {
+        "parentTerm": null,
+        "editions": {
+          "english1950": {
+            "title": "Above",
+            "pronunciation": null,
+            "associations": [
+              {
+                "type": "reference",
+                "quotation": "the Judgment Seat Above, Whence Objective justice proceeds",
+                "terms": [
+                  {
+                    "id": 10,
+                    "title": "Objective"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [27],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "reference",
+                "quotation": "the foundation of this Most Great Greatness is there Above",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [24],
+                  "specialPages": []
+                }
+              }
+            ],
+            "usedThroughOut": false
+          },
+          "english1992": {
+            "title": "Above",
+            "pronunciation": null,
+            "associations": [
+              {
+                "type": "reference",
+                "quotation": "the Judgment Seat Above, Whence Objective justice proceeds",
+                "terms": [
+                  {
+                    "id": 10,
+                    "title": "Objective"
+                  }
+                ],
+                "pages": {
+                  "pageNumbers": [24],
+                  "specialPages": []
+                }
+              },
+              {
+                "type": "reference",
+                "quotation": "the foundation of this Most Great Greatness is there Above",
+                "terms": [],
+                "pages": {
+                  "pageNumbers": [225],
+                  "specialPages": []
+                }
+              }
+            ],
+            "usedThroughOut": false
+          }
+        },
+        "inOtherLangs": []
       },
-      "french": {
-        "transcription": "fàkjtesdt",
-        "spelling": null,
-        "sound": null
-      }
+      "dictionary": null
     }
-  },
-  {
-    "id": "93c166f3-1b20-4b3f-8622",
-    "parentTerm": null,
-    "source": "Guides and Index - Second Edition",
-    "editions": {
-      "english1950": {
-        "title": "Above",
-        "pronunciation": null,
-        "associations": [
-          {
-            "type": "reference",
-            "quotation": "the Judgment Seat Above, Whence Objective justice proceeds",
-            "terms": [
-              {
-                "id": 10,
-                "title": "Objective"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [27],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "reference",
-            "quotation": "the foundation of this Most Great Greatness is there Above",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [24],
-              "specialPages": []
-            }
-          }
-        ],
-        "usedThroughOut": false
-      },
-      "english1992": {
-        "title": "Above",
-        "pronunciation": null,
-        "associations": [
-          {
-            "type": "reference",
-            "quotation": "the Judgment Seat Above, Whence Objective justice proceeds",
-            "terms": [
-              {
-                "id": 10,
-                "title": "Objective"
-              }
-            ],
-            "pages": {
-              "pageNumbers": [24],
-              "specialPages": []
-            }
-          },
-          {
-            "type": "reference",
-            "quotation": "the foundation of this Most Great Greatness is there Above",
-            "terms": [],
-            "pages": {
-              "pageNumbers": [225],
-              "specialPages": []
-            }
-          }
-        ],
-        "usedThroughOut": false
-      }
-    },
-    "otherPronunciations": null
-  }
-],
+  ],
   "term": [
-  {
-    "id": 1,
-    "title": "Mike",
-    "pronunciation" : null,
-    "pages": [
-      686,
-      12,
-      100
-    ],
-    "tags": ["blue"],
-    "notes": [
-      {
-        "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
-      },
-      {
-        "text": "mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue"
-      },
-      {
-        "text": "cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam"
-      }
-    ],
-    "createdBy": null,
-    "createdAt": "4123131"
-  },
-  {
-    "id": 2,
-    "title": "Whiskey",
-    "pages": [
-      197,
-      971,
-      280,
-      1274,
-      808,
-      315,
-      524,
-      839,
-      430,
-      115
-    ],
-    "tags": ["blue", "red"],
-    "notes": [
-      {
-        "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
-      }
-    ],
-    "createdBy": null,
-    "createdAt": "4123132"
-  },
-  {
-    "id": 3,
-    "title": "India",
-    "pages": [
-      222,
-      11,
-      100
-    ],
-    "tags": [
-      "blue"
-    ],
-    "notes": [
-      {
-        "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
-      }
-    ],
-    "createdBy": null,
-    "createdAt": "4123133"
-  }
-],
+    {
+      "id": 1,
+      "title": "Mike",
+      "pronunciation": null,
+      "pages": [686, 12, 100],
+      "tags": ["blue"],
+      "notes": [
+        {
+          "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
+        },
+        {
+          "text": "mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue"
+        },
+        {
+          "text": "cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam"
+        }
+      ],
+      "createdBy": null,
+      "createdAt": "4123131"
+    },
+    {
+      "id": 2,
+      "title": "Whiskey",
+      "pages": [197, 971, 280, 1274, 808, 315, 524, 839, 430, 115],
+      "tags": ["blue", "red"],
+      "notes": [
+        {
+          "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
+        }
+      ],
+      "createdBy": null,
+      "createdAt": "4123132"
+    },
+    {
+      "id": 3,
+      "title": "India",
+      "pages": [222, 11, 100],
+      "tags": ["blue"],
+      "notes": [
+        {
+          "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
+        }
+      ],
+      "createdBy": null,
+      "createdAt": "4123133"
+    }
+  ],
   "rawTerm": [
-    {"id":1, "title":"Mike","pages":[686, 12, 100],"tags" : [], "notes": [], "createdBy": null, "createdAt": "4123131"},
-    {"id":2, "title":"Whiskey","pages":[197,971,280,1274,808,315,524,839,430,115],"tags" : [], "notes": [], "createdBy": null, "createdAt": "4123132"},
-    {"id":3, "title":"India","pages":[222, 11, 100],"tags" : [], "notes": [], "createdBy": null, "createdAt": "4123133"}
+    {
+      "id": 1,
+      "title": "Mike",
+      "pages": [686, 12, 100],
+      "tags": [],
+      "notes": [],
+      "createdBy": null,
+      "createdAt": "4123131"
+    },
+    {
+      "id": 2,
+      "title": "Whiskey",
+      "pages": [197, 971, 280, 1274, 808, 315, 524, 839, 430, 115],
+      "tags": [],
+      "notes": [],
+      "createdBy": null,
+      "createdAt": "4123132"
+    },
+    {
+      "id": 3,
+      "title": "India",
+      "pages": [222, 11, 100],
+      "tags": [],
+      "notes": [],
+      "createdBy": null,
+      "createdAt": "4123133"
+    }
   ],
   "user_terms": [
-  {
-    "user": { "id": "93c166f3-1b20-4b3f-8624-7188a22b8495", "firstName": "Elvis", "lastName": "Tang", "email": "elvis.tang@gmail.co"},
-    "term": {"id":1, "title":"Mike","pages":[686, 12, 100], "tags" : [], "createdBy": null, "createdAt": "4123131"},
-    "pages":[686, 12, 100],
-    "notes": [],
-    "tags": [],
-    "createdAt": "4123131"
-  },
-  {
-    "user": { "id": "93c166f3-1b20-4b3f-8624-7188a22b8495", "firstName": "Elvis", "lastName": "Tang", "email": "elvis.tang@gmail.co"},
-    "term":  {"id":2, "title":"Whiskey","pages":[197,971,280,1274,808,315,524,839,430,115],"tags" : [], "createdBy": null, "createdAt": "4123132"},
-    "pages":[197,971,280,1274,808,315,524,839,430,115],
-    "notes": [
-      {
-        "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
+    {
+      "user": {
+        "id": "93c166f3-1b20-4b3f-8624-7188a22b8495",
+        "firstName": "Elvis",
+        "lastName": "Tang",
+        "email": "elvis.tang@gmail.co"
       },
-      {
-        "text": "mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue"
+      "term": {
+        "id": 1,
+        "title": "Mike",
+        "pages": [686, 12, 100],
+        "tags": [],
+        "createdBy": null,
+        "createdAt": "4123131"
       },
-      {
-        "text": "cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam"
-      }
-    ],
-    "tags": [],
-    "createdAt": "4123131"
-  },
-  {
-    "user": { "id": "93c166f3-1b20-4b3f-8624-7188a22b8495", "firstName": "Elvis", "lastName": "Tang", "email": "elvis.tang@gmail.co"},
-    "term": {"id":3, "title":"India","pages":[222, 11, 100], "tags" : [], "createdBy": null, "createdAt": "4123133"},
-    "pages":[222, 11, 100],
-    "notes": [
-      {
-        "text": "egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit"
-      }
-    ],
-    "tags": [
-      "Purple",
-      "Blue",
-      "Red",
-      "Yellow",
-      "Crimson",
-      "Red"
-    ],
-    "createdAt": "41231910"
-  }
-]
+      "pages": [686, 12, 100],
+      "notes": [],
+      "tags": [],
+      "createdAt": "4123131"
+    },
+    {
+      "user": {
+        "id": "93c166f3-1b20-4b3f-8624-7188a22b8495",
+        "firstName": "Elvis",
+        "lastName": "Tang",
+        "email": "elvis.tang@gmail.co"
+      },
+      "term": {
+        "id": 2,
+        "title": "Whiskey",
+        "pages": [197, 971, 280, 1274, 808, 315, 524, 839, 430, 115],
+        "tags": [],
+        "createdBy": null,
+        "createdAt": "4123132"
+      },
+      "pages": [197, 971, 280, 1274, 808, 315, 524, 839, 430, 115],
+      "notes": [
+        {
+          "text": "duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi"
+        },
+        {
+          "text": "mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue"
+        },
+        {
+          "text": "cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam"
+        }
+      ],
+      "tags": [],
+      "createdAt": "4123131"
+    },
+    {
+      "user": {
+        "id": "93c166f3-1b20-4b3f-8624-7188a22b8495",
+        "firstName": "Elvis",
+        "lastName": "Tang",
+        "email": "elvis.tang@gmail.co"
+      },
+      "term": {
+        "id": 3,
+        "title": "India",
+        "pages": [222, 11, 100],
+        "tags": [],
+        "createdBy": null,
+        "createdAt": "4123133"
+      },
+      "pages": [222, 11, 100],
+      "notes": [
+        {
+          "text": "egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit"
+        }
+      ],
+      "tags": ["Purple", "Blue", "Red", "Yellow", "Crimson", "Red"],
+      "createdAt": "41231910"
+    }
+  ]
 }
-
-
-

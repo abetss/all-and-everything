@@ -5,64 +5,74 @@ declare namespace Index {
     pasim,
   }
 
-  export interface Pronunciation {
-      phonetic?: string;
-      spelling?: any;
-      sound?: any;
-  }
-
   export interface TermReference {
-      id: any;
-      title: string;
+    id: any;
+    title: string;
   }
 
   export interface SpecialPage {
-      page: number;
-      type: SpecialPageType;
+    page: number;
+    type: SpecialPageType;
   }
 
   export interface Pages {
-      pageNumbers: number[];
-      specialPages: SpecialPage[];
+    pageNumbers: number[];
+    specialPages: SpecialPage[];
   }
 
   export interface Association {
-      type: string;
-      quotation?: string;
-      terms: TermReference[];
-      pages: Pages;
+    type: string;
+    quotation?: string;
+    terms: TermReference[];
+    pages: Pages;
   }
 
   export interface TermInfo {
-      title: string;
-      pronunciation: Pronunciation;
-      associations: Association[];
-      usedThroughOut: boolean;
+    title: string;
+    pronunciation: Pronunciation;
+    associations: Association[];
+    usedThroughOut: boolean;
   }
 
-  export interface Editions {
-      english1950?: TermInfo;
-      english1992?: TermInfo;
+  export interface SubWord {
+    word: string;
+    description: string;
+    lang: string;
   }
 
-  export interface OtherPronunciation {
-      transcription: string;
-      spelling?: any;
-      sound?: any;
+  export interface OtherLang {
+    lang: string;
+    spelling: string;
   }
 
-  export interface OtherPronunciations {
-      russian: OtherPronunciation;
-      french: OtherPronunciation;
+  export interface Dictionary {
+    description?: string;
+    subWords: SubWord[];
+    inOtherLangs: Pronunciation[];
+  }
+
+  export interface IndexGuideEditions {
+    english1950?: TermInfo;
+    english1992?: TermInfo;
+  }
+
+  export interface Pronunciation {
+    phonetic?: string;
+    spelling?: string;
+    sound?: string;
+    lang?: string;
+  }
+
+  export interface IndexGuide {
+    parentTerm?: string;
+    editions: IndexGuideEditions;
+    inOtherLangs: Pronunciation[];
   }
 
   export interface Term {
-      id: string;
-      parentTerm?: string;
-      source: string;
-      editions: Editions;
-      otherPronunciations: OtherPronunciations;
+    id: string;
+    title: string;
+    indexGuide?: IndexGuide;
+    dictionary?: Dictionary;
   }
-
 }
-
