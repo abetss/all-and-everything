@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextField } from '@material-ui/core';
-import { Box } from 'rebass/styled-components';
+import { Box } from 'src/design-system';
 
 interface TermsSearchProps {
   onChange: (filterText: string) => void;

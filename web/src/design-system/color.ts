@@ -80,7 +80,7 @@ export const colorPallet = {
 export const colors = {
   primary: '#00449e',
   'primary-variant': '#357edd',
-  'primary-variant2': '#96ccff',
+  'primary-variant-2': '#96ccff',
   secondary: '#137752',
   'secondary-variant': '#19a974',
   background: '#fff',
@@ -90,4 +90,37 @@ export const colors = {
   'on-secondary': '#fff',
   'on-background': '#000',
   'on-surface': '#000',
+  dark: {
+    primary: '#357edd',
+    'primary-variant': '#00449e',
+    'primary-variant-2': '#002b53',
+    secondary: '#19a974',
+    'secondary-variant': '#137752',
+    background: '#373737',
+    surface: '#4b4b4b',
+    error: '#ff4136',
+    'on-primary': '#fff',
+    'on-secondary': '#fff',
+    'on-background': '#fff',
+    'on-surface': '#fff',
+  },
+};
+
+export const themeUiColor = {
+  text: '#000', // Body foreground color
+  background: '#fff', // Body background color
+  primary: '#00449e', // Primary brand color for links, buttons, etc.
+  secondary: '#19a974', // A secondary brand color for alternative styling
+  accent: '#96ccff', // A contrast color for emphasizing UI
+  highlight: '#357edd', // A background color for highlighting text
+  muted: '#f4f4f4', // A faint color for backgrounds, borders, and accents that do not require high contrast with the background color
+  dark: {
+    text: '#FCFAE2',
+    background: '#1c1c1c',
+    primary: '#357edd',
+    secondary: '#19a974',
+    accent: '#167ee0',
+    highlight: '#00449e',
+    muted: '#5f5f5f',
+  },
 };

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Flex, Text } from 'rebass/styled-components';
-import { Badge } from '../../../../design-system';
+import { Badge, Flex, Text } from 'src/design-system';
 
 interface TermPagesProps {
   pages: number[];
@@ -8,7 +7,7 @@ interface TermPagesProps {
 
 export const TermPages = ({ pages }: TermPagesProps) => (
   <Flex mt={2}>
-    <Text fontSize={3} mr={1}>
+    <Text sx={{ fontSize: 3 }} mr={1}>
       Pages:{' '}
     </Text>
     {pages.map((page: number) => (

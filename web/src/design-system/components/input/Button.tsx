@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button as RebassButton } from 'rebass/styled-components';
+import { Button as ThemeUIButton } from '../primitive';
 import { MarginProps } from 'styled-system';
 
 const smallSize = {
@@ -19,8 +19,8 @@ const sizes = {
 
 interface ButtonProps extends MarginProps {
   size?: 'small' | 'medium';
-  disabled?: Boolean;
-  onClick?: (this: void, e: Event) => void;
+  disabled?: boolean;
+  onClick?: (e: any) => void;
   children?: string;
   bg?: string;
 }
@@ -29,8 +29,7 @@ export const Button = ({ onClick, disabled, size = 'medium', children, ...props 
   const sizeProps = sizes[size];
 
   return (
-    <RebassButton
-      display="block"
+    <ThemeUIButton
       p={0}
       bg="primary"
       color="on-primary"
@@ -39,12 +38,13 @@ export const Button = ({ onClick, disabled, size = 'medium', children, ...props 
       {...sizeProps}
       {...props}
       sx={{
+        display: 'block',
         ':hover': { cursor: 'pointer', opacity: '0.9' },
         ':focus': { outline: 'none' },
         borderRadius: 2,
       }}
     >
       {children}
-    </RebassButton>
+    </ThemeUIButton>
   );
 };

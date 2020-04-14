@@ -1,5 +1,6 @@
 import React from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider } from 'theme-ui';
+import { Global } from '@emotion/core';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import { theme, Page } from 'src/design-system';
@@ -9,11 +10,18 @@ import { createClient } from './apollo';
 
 const client = createClient();
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-`;
+const GlobalStyle = () => (
+  <Global
+    styles={theme => ({
+      '*': {
+        boxSizing: 'border-box',
+      },
+      body: {
+        margin: 0,
+      },
+    })}
+  />
+);
 
 // Using both ApolloProvider and ApolloHooksProvider in case we don't want to use
 // apollo hooks all the time. Otherwise, we can remove the ApolloProvider later

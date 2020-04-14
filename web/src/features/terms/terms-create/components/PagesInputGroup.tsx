@@ -11,7 +11,7 @@ export const PagesInputGroup = ({ addedPages, onAddPageClicked, onRemovePageClic
   const [page, setPage] = useState('');
 
   return (
-    <Flex flexDirection="row" alignItems="baseline">
+    <Flex sx={{ flexDirection: 'row', alignItems: 'baseline' }}>
       <TextField
         label="Page Number"
         fullWidth={false}

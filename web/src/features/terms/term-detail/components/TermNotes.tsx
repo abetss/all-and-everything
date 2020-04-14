@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Box, Text } from 'rebass/styled-components';
+import { Flex, Box, Text } from 'src/design-system';
 import { TermNote } from './TermNote';
 
 interface TermNotesProps {
@@ -7,10 +7,10 @@ interface TermNotesProps {
 }
 
 export const TermNotes = ({ notes }: TermNotesProps) => (
-  <Flex flexDirection="column">
+  <Flex sx={{ flexDirection: 'row' }}>
     {notes.length > 0 && (
       <Box mt={3}>
-        <Text fontSize={3}>Notes: </Text>
+        <Text sx={{ fontSize: 3 }}>Notes: </Text>
         {notes.map((note: any, index: number) => (
           <TermNote key={`term-note-${index}`} note={note} />
         ))}

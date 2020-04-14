@@ -1,28 +1,34 @@
 import React from 'react';
-import { Box } from 'rebass/styled-components';
-import { Text } from '../typography/Text.component';
+import { Box, Text } from '../primitive';
 import { MarginProps, ColorProps } from 'styled-system';
 
 export interface BadgeProps extends MarginProps, ColorProps {
   children: string | number;
-  onClick?: (this: void, e: Event) => void;
+  onClick?: (e: any) => void;
+  bg?: string;
 }
 
-export const Badge = ({ children, onClick, color = 'on-secondary', ...props }: BadgeProps) => {
+export const Badge = ({
+  children,
+  onClick,
+  bg = 'secondary-variant',
+  color = 'on-secondary',
+  ...props
+}: BadgeProps) => {
   return (
     <Box
       onClick={onClick}
       {...props}
       sx={{
         display: 'inline-block',
-        bg: 'secondary-variant',
+        bg,
         px: 2,
         py: 1,
         borderRadius: 9999,
         ':hover': { cursor: onClick ? 'pointer' : 'default' },
       }}
     >
-      <Text color={color}>{children}</Text>
+      <Text sx={{ color }}>{children}</Text>
     </Box>
   );
 };

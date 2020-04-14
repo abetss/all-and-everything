@@ -1,6 +1,5 @@
 import React from 'react';
-import { Flex } from 'rebass/styled-components';
-import { ListItem } from 'src/design-system';
+import { ListItem, Flex } from 'src/design-system';
 import { getTerms_termNotes_list } from '../graphqlGenTypes/getTerms';
 
 interface TermsProps {
@@ -10,7 +9,7 @@ interface TermsProps {
 }
 
 export const Terms = ({ terms, onClick, termId }: TermsProps) => (
-  <Flex flexDirection="column">
+  <Flex sx={{ flexDirection: 'column' }}>
     {terms.map(({ id, title }: any) => (
       <ListItem id={id} onClick={onClick} key={id} selected={termId === Number(id)}>
         {title}

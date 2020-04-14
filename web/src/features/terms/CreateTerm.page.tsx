@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box } from 'rebass/styled-components';
-import { PageHeading } from '../../design-system/components';
+import { PageHeading, Box } from 'src/design-system';
 import { CreatePageConnector } from './terms-create';
 
 export const CreateTermPage = () => (

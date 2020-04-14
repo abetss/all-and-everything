@@ -4,8 +4,8 @@ import { TextField, Button, Flex } from 'src/design-system';
 
 export const CreateTerm = (props: any): any => {
   return (
-    <Flex flexDirection="column">
-      <Flex alignItems="center">
+    <Flex sx={{ flexDirection: 'column' }}>
+      <Flex sx={{ flexDirection: 'row', alignItems: 'baseline' }}>
         <TextField
           label="Term"
           fullWidth={false}
@@ -14,15 +14,14 @@ export const CreateTerm = (props: any): any => {
           value={props.term}
           onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => props.onTermChange(event.target.value)}
         />
+        <PagesInputGroup
+          addedPages={props.currentPages}
+          onAddPageClicked={props.onAddPageClicked}
+          onRemovePageClick={props.onRemovePageClick}
+        />
       </Flex>
 
-      <PagesInputGroup
-        addedPages={props.currentPages}
-        onAddPageClicked={props.onAddPageClicked}
-        onRemovePageClick={props.onRemovePageClick}
-      />
-
-      <Button onClick={props.onTermSubmitted} mt={5}>
+      <Button sx={{ width: 4 }} onClick={props.onTermSubmitted} mt={5}>
         Create Term
       </Button>
     </Flex>
