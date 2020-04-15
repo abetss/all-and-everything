@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import { CircleButton, Flex } from 'src/design-system';
 import { useTerms } from './utils';
 import { TermsSearch, Terms } from './components';
@@ -11,12 +11,13 @@ interface TermsListProps {
 
 export const TermsList = ({ terms }: TermsListProps) => {
   const [filteredTerms, setTermId, termId, filterList] = useTerms(terms);
+  let { path } = useRouteMatch();
 
   return (
     <React.Fragment>
       <Flex sx={{ alignItems: 'center', pr: 3 }}>
         <TermsSearch onChange={filterList} />
-        <Link to="/create">
+        <Link to={`${path}/create`}>
           <CircleButton size="medium" bg="secondary">
             +
           </CircleButton>
