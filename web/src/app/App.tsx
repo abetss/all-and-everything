@@ -19,6 +19,7 @@ const GlobalStyle = () => (
       },
       body: {
         margin: 0,
+        backgroundColor: '#fff'
       },
     })}
   />

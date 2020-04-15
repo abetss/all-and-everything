@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import React from 'react';
 import { Button as ThemeUIButton } from '../primitive';
 import { MarginProps } from 'styled-system';
@@ -22,7 +24,6 @@ interface ButtonProps extends MarginProps {
   disabled?: boolean;
   onClick?: (e: any) => void;
   children?: string;
-  bg?: string;
 }
 
 export const Button = ({ onClick, disabled, size = 'medium', children, ...props }: ButtonProps) => {
@@ -31,16 +32,11 @@ export const Button = ({ onClick, disabled, size = 'medium', children, ...props 
   return (
     <ThemeUIButton
       p={0}
-      bg="primary"
-      color="on-primary"
       onClick={onClick}
       disabled={disabled}
       {...sizeProps}
       {...props}
       sx={{
-        display: 'block',
-        ':hover': { cursor: 'pointer', opacity: '0.9' },
-        ':focus': { outline: 'none' },
         borderRadius: 2,
       }}
     >

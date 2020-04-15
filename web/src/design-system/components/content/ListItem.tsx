@@ -6,10 +6,10 @@ export const ListItem = ({ children, id, onClick, selected, withBorderTop }: any
     <Box
       sx={{
         borderTop: withBorderTop? 1 : 0,
-        borderColor: 'primary-variant',
+        borderColor: 'primary.light',
         ':hover': { cursor: 'pointer' },
-        bg: selected ? 'primary-variant' : '',
-        color: selected ? 'background' : 'on-background',
+        bg: selected ? 'primary.main' : '',
+        color: selected ? 'primary.contrast' : 'text.primary',
       }}
       p={3}
       onClick={() => onClick(id)}

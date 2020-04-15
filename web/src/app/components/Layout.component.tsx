@@ -25,9 +25,9 @@ export const Layout = ({ children }: PageProps) => {
       <header
         sx={{
           width: '100%',
-          bg: 'primary',
+          bg: 'primary.dark',
           px: 3,
-          color: 'on-primary',
+          color: 'primary.contrast',
           alignItems: 'center',
           display: 'flex',
           flexDirection: 'row',

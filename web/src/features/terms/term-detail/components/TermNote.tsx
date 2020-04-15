@@ -6,7 +6,7 @@ interface TermNoteProps {
 }
 
 export const TermNote = ({ note }: TermNoteProps) => (
-  <Card p={3} my={2} sx={{ border: 1, borderColor: 'surface' }}>
+  <Card p={3} my={2} sx={{ border: 1, borderColor: 'bg.surface' }}>
     <Text>{note.text}</Text>
   </Card>
 );

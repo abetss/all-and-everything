@@ -10,7 +10,7 @@ export const TermTags = ({ tags }: TermTagsProps) => (
     {tags.map((tag: string) => (
       <Badge
         mr={1}
-        bg="secondary"
+        bg="secondary.dark"
         key={`term-tag-${tag}`}
         onClick={() => {
           console.log(tag);

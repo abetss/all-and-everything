@@ -30,7 +30,7 @@ export const NavLink = ({ to, href = null, ...props }) => {
         letterSpacing: 'tracked',
         textTransform: 'capitalize',
         borderBottom: match ? 3 : 0,
-        borderBottomColor: 'primary-variant',
+        borderBottomColor: 'primary.light',
         ':hover': {
           cursor: 'pointer',
           opacity: 0.8,

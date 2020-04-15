@@ -17,7 +17,7 @@ export const TermsPage = () => {
         path={path}
         children={
           <Flex>
-            <Box sx={{ bg: 'surface', minHeight: '100vh', maxWidth: '25%' }}>
+            <Box sx={{ bg: 'bg.surface', minHeight: '100vh', maxWidth: '25%' }}>
               <TermsListConnector />
             </Box>
             <Box sx={{ width: '75%' }}>{termId && <TermDetailConnector id={termId} />}</Box>

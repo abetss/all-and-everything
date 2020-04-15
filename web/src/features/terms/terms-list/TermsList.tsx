@@ -18,7 +18,7 @@ export const TermsList = ({ terms }: TermsListProps) => {
       <Flex sx={{ alignItems: 'center', pr: 3 }}>
         <TermsSearch onChange={filterList} />
         <Link to={`${path}/create`}>
-          <CircleButton size="medium" bg="secondary">
+          <CircleButton size="medium" variant="primary">
             +
           </CircleButton>
         </Link>

@@ -1,3 +1,4 @@
+import { styles } from './styles';
 import { colorPallet, colors } from './colors';
 import { variants } from './variants';
 
@@ -24,7 +25,10 @@ export const theme = {
   borders: [0, '1px solid', '2px solid', '4px solid', '8px solid', '16px solid', '32px solid'],
   radii: [0, 2, 4, 8, 16, 32, 9999, '100%'],
   sizes: [16, 32, 64, 128, 256, 512, 1024],
+  useCustomProperties: false,
+  useColorSchemeMediaQuery: true,
   colorPallet,
   colors,
+  styles,
   ...variants,
 };

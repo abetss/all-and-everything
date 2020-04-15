@@ -1,4 +1,14 @@
 export const variants = {
+  buttons: {
+    primary: {
+      color: 'primary.contrast',
+      bg: 'primary.main',
+    },
+    secondary: {
+      color: 'secondary.contrast',
+      bg: 'secondary.main',
+    },
+  },
   cards: {
     primary: {
       borderRadius: 2,
@@ -8,18 +18,18 @@ export const variants = {
       padding: 1,
       borderRadius: 2,
       border: '1px solid',
-      borderColor: 'muted',
+      borderColor: 'bg.surface',
     },
     clickable: {
       '&:hover': {
         backgroundColor: 'primary-light',
-        color: 'on-surface',
+        color: 'text.primary',
         cursor: 'pointer',
       },
     },
   },
   Text: {
-    color: 'on-background',
+    color: 'text.primary',
     textAlign: 'left',
     fontSize: 2,
     fontWeight: 3,
@@ -27,4 +37,4 @@ export const variants = {
     lineHeight: 'solid',
     letterSpacing: 'normal',
   },
-}
+};

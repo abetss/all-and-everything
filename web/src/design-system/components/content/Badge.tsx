@@ -11,8 +11,8 @@ export interface BadgeProps extends MarginProps, ColorProps {
 export const Badge = ({
   children,
   onClick,
-  bg = 'secondary-variant',
-  color = 'on-secondary',
+  bg = 'secondary.main',
+  color = 'secondary.contrast',
   ...props
 }: BadgeProps) => {
   return (

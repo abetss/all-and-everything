@@ -7,7 +7,7 @@ interface CircleButtonProps extends MarginProps {
   disabled?: boolean;
   onClick?: (event: any) => void;
   children?: string;
-  bg?: string;
+  variant?: string;
 }
 
 const smallSize = {
@@ -37,7 +37,6 @@ export const CircleButton = ({ onClick, disabled, size, children, ...props }: Ci
       {...sizeProps}
       {...props}
       sx={{
-        ':hover': { cursor: 'pointer', opacity: '0.9' },
         borderRadius: 6,
       }}
     >
