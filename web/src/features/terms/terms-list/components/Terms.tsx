@@ -10,8 +10,8 @@ interface TermsProps {
 
 export const Terms = ({ terms, onClick, termId }: TermsProps) => (
   <Flex sx={{ flexDirection: 'column' }}>
-    {terms.map(({ id, title }: any) => (
-      <ListItem id={id} onClick={onClick} key={id} selected={termId === Number(id)}>
+    {terms.map(({ id, title }: any, index) => (
+      <ListItem id={id} onClick={onClick} key={`term-list-${title}`} withBorderTop={index !== 0} selected={termId === Number(id)}>
         {title}
       </ListItem>
     ))}

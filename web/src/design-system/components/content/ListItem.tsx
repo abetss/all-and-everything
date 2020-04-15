@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box } from 'src/design-system';
 
-export const ListItem = ({ children, id, onClick, selected }: any) => {
+export const ListItem = ({ children, id, onClick, selected, withBorderTop }: any) => {
   return (
     <Box
       sx={{
-        borderTop: 1,
+        borderTop: withBorderTop? 1 : 0,
         borderColor: 'primary-variant',
         ':hover': { cursor: 'pointer' },
         bg: selected ? 'primary-variant' : '',
