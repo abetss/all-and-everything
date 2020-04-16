@@ -135,8 +135,8 @@ export const colors = {
         hint: '#919191',
       },
       bg: {
-        default: '#111',
-        surface: '#222',
+        default: '#222',
+        surface: '#333',
       },
       divider: '#666',
     },
