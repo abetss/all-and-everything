@@ -5,7 +5,7 @@ export const ListItem = ({ children, id, onClick, selected, withBorderTop }: any
   return (
     <Box
       sx={{
-        borderTop: withBorderTop? 1 : 0,
+        borderTop: withBorderTop ? 1 : 0,
         borderColor: 'secondary.light',
         ':hover': { cursor: 'pointer' },
         bg: selected ? 'secondary.main' : '',

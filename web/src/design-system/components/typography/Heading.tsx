@@ -8,7 +8,7 @@ interface PageHeadingProps extends MarginProps {
 
 export const PageHeading = ({ children }: PageHeadingProps) => {
   return (
-    <Heading pt={3} mb={2} sx={{ fontSize: 6 }} color="primary">
+    <Heading pt={3} mb={2} sx={{ fontSize: 6 }} color="text.primary">
       {children}
     </Heading>
   );
@@ -16,7 +16,7 @@ export const PageHeading = ({ children }: PageHeadingProps) => {
 
 export const SidePageHeading = ({ children, ...props }: PageHeadingProps) => {
   return (
-    <Heading pt={3} sx={{ fontSize: 4 }} color="primary" {...props} mb={1}>
+    <Heading pt={3} sx={{ fontSize: 4 }} color="text.primary" {...props} mb={1}>
       {children}
     </Heading>
   );

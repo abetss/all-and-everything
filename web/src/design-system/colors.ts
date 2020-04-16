@@ -83,19 +83,19 @@ export const colors = {
     light: '#f9683a',
     main: '#bf360c',
     dark: '#870000',
-    contrast: "#fff",
+    contrast: '#fff',
   },
   secondary: {
-    light:'#5dc6f2',
+    light: '#5dc6f2',
     main: '#0c95bf',
     dark: '#00678f',
-    contrast: "#fff",
+    contrast: '#fff',
   },
   error: {
-    light:'#fe685f',
+    light: '#fe685f',
     main: '#ff4136',
     dark: '#c8241a',
-    contrast: "#fff",
+    contrast: '#fff',
   },
   text: {
     primary: '#111',
@@ -108,7 +108,39 @@ export const colors = {
     surface: '#f4f4f4',
   },
   divider: '#eae8e8',
-  background: '#fff', // leave this so that theme-ui don't put purple background on the body element
+  modes: {
+    dark: {
+      primary: {
+        light: '#f9683a',
+        main: '#bf360c',
+        dark: '#870000',
+        contrast: '#fff',
+      },
+      secondary: {
+        light: '#5dc6f2',
+        main: '#0c95bf',
+        dark: '#00678f',
+        contrast: '#fff',
+      },
+      error: {
+        light: '#c8241a',
+        main: '#ff4136',
+        dark: '#fe685f',
+        contrast: '#fff',
+      },
+      text: {
+        primary: '#f1f1f1',
+        secondary: '#dddada',
+        disabled: '#bbb',
+        hint: '#919191',
+      },
+      bg: {
+        default: '#111',
+        surface: '#222',
+      },
+      divider: '#666',
+    },
+  },
 };
 
 export const oldMaterialUIInspiredColors = {
@@ -138,7 +170,7 @@ export const oldMaterialUIInspiredColors = {
     'on-background': '#fff',
     'on-surface': '#fff',
   },
-}
+};
 
 export const themeUiColor = {
   text: '#000', // Body foreground color

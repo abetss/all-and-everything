@@ -7,13 +7,13 @@
 // ====================================================
 
 export interface getTerms_termNotes_list {
-  __typename: "TermNote";
+  __typename: 'TermNote';
   id: string;
   title: string | null;
 }
 
 export interface getTerms_termNotes {
-  __typename: "TermNotesConnection";
+  __typename: 'TermNotesConnection';
   cursor: string;
   hasMore: boolean;
   list: getTerms_termNotes_list[];

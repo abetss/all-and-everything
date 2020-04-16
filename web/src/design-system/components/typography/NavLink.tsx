@@ -8,7 +8,7 @@ export const NavLink = ({ to, href = null, ...props }) => {
 
   let match = useRouteMatch({
     path: to,
-    exact: false
+    exact: false,
   });
 
   const onLinkClick = useCallback(() => {

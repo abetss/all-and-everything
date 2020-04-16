@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import { Flex, NavLink } from 'src/design-system';
 
@@ -13,7 +13,7 @@ type NavigationProps = {
 };
 
 export const Navigation = ({ navLinks }: NavigationProps) => (
-  <Flex as="nav" >
+  <Flex as="nav">
     {navLinks.map(({ to, title, href }) => (
       <NavLink to={to} href={href} mr={3} key={`nav-link-${title}`}>
         {title}
