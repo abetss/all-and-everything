@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React from 'react';
 import { Button as ThemeUIButton } from '../primitive';
 import { MarginProps } from 'styled-system';
 
