@@ -1,18 +1,18 @@
 import { useState, useCallback } from 'react';
 import { findStringMatch } from 'src/core/utils';
-import { useQueryParam, NumberParam } from 'use-query-params';
+import { useQueryParam, StringParam } from 'use-query-params';
 import { getTerms_termNotes_list } from './../graphqlGenTypes/getTerms';
 
 export const useTerms = (
   terms: getTerms_termNotes_list[],
 ): [
   getTerms_termNotes_list[],
-  (newValue: number, updateType?: 'replace' | 'replaceIn' | 'push' | 'pushIn') => void,
-  number,
+  (newValue: string, updateType?: 'replace' | 'replaceIn' | 'push' | 'pushIn') => void,
+  string,
   (input: string) => void,
 ] => {
   const [filteredTerms, setFilteredTerms] = useState(terms);
-  const [termId, setTermId] = useQueryParam('id', NumberParam);
+  const [termId, setTermId] = useQueryParam('id', StringParam);
 
   const filterList = useCallback(
     (input: string) => {

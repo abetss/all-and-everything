@@ -10,7 +10,13 @@ export const styles = {
       ':focus': { outline: 'none' },
     },
     Text: {
-      color: 'primary',
+      color: 'text.primary',
+      textAlign: 'left',
+      fontSize: 2,
+      fontWeight: 3,
+      fontFamily: 'regular',
+      lineHeight: 'solid',
+      letterSpacing: 'normal',
     },
   },
 };

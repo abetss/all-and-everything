@@ -4,8 +4,8 @@ import { getTerms_termNotes_list } from '../graphqlGenTypes/getTerms';
 
 interface TermsProps {
   terms: getTerms_termNotes_list[];
-  onClick: (id: number) => void;
-  termId: number;
+  onClick: (id: string) => void;
+  termId: string;
 }
 
 export const Terms = ({ terms, onClick, termId }: TermsProps) => (
@@ -16,7 +16,7 @@ export const Terms = ({ terms, onClick, termId }: TermsProps) => (
         onClick={onClick}
         key={`term-list-${title}`}
         withBorderTop={index !== 0}
-        selected={termId === Number(id)}
+        selected={termId === id}
       >
         {title}
       </ListItem>

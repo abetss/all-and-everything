@@ -13,6 +13,8 @@ export const TermsList = ({ terms }: TermsListProps) => {
   const [filteredTerms, setTermId, termId, filterList] = useTerms(terms);
   let { path } = useRouteMatch();
 
+  console.log('termId', JSON.stringify(termId, null, 2));
+
   return (
     <React.Fragment>
       <Flex sx={{ alignItems: 'center', pr: 3 }}>

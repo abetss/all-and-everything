@@ -2,11 +2,11 @@ import React from 'react';
 import { useQuery } from 'react-apollo-hooks';
 import gql from 'graphql-tag';
 import { TermsList } from './TermsList';
-import { getTerms, getTermsVariables } from './graphqlGenTypes/getTerms';
+import { getTermsVariables } from './graphqlGenTypes/getTerms';
 
 const TERMS_QUERY = gql`
-  query getTerms($pageSize: Int, $after: String) {
-    termNotes(pageSize: $pageSize, after: $after) {
+  query indexTerms($pageSize: Int, $after: String) {
+    indexTerms(pageSize: $pageSize, after: $after) {
       cursor
       hasMore
       list {
@@ -18,7 +18,7 @@ const TERMS_QUERY = gql`
 `;
 
 export const TermsListConnector = () => {
-  const { data, error, loading } = useQuery<getTerms, getTermsVariables>(TERMS_QUERY);
+  const { data, error, loading } = useQuery<any, getTermsVariables>(TERMS_QUERY);
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -27,7 +27,7 @@ export const TermsListConnector = () => {
   }
 
   const {
-    termNotes: { list },
+    indexTerms: { list },
   } = data;
 
   return <TermsList terms={list} />;

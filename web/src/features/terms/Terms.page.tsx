@@ -10,6 +10,8 @@ export const TermsPage = () => {
   const [termId] = useTermQueryParam();
   let { path } = useRouteMatch();
 
+  console.log('termId', JSON.stringify(termId, null, 2));
+
   return (
     <Switch>
       <Route

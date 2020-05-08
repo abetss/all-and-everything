@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "schema:download": "apollo client:download-schema src/schema.graphql",
+    "schema:download": "rm -rf src/schema.graphql & apollo client:download-schema src/schema.graphql",
     "schema:gen": "apollo codegen:generate graphqlGenTypes --excludes=node_modules/* --includes=**/*.tsx --globalTypesFile=src/core/types/globalTypes.ts --localSchemaFile src/schema.graphql --target typescript --tagName gql",
     "schema:gen:remote": "apollo codegen:generate graphqlGenTypes --excludes=node_modules/* --includes=**/*.tsx --globalTypesFile=src/core/types/globalTypes.ts --endpoint http://localhost:4000/graphql --target typescript --tagName gql --watch",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",

@@ -3,43 +3,43 @@ import { paginateResults } from 'src/core/utils';
 
 export const indexTermsTypeDefs = gql`
   extend type Query {
-    interTerms(pageSize: Int, after: String): IndexTermsConnection!
+    indexTerms(pageSize: Int, after: String): IndexTermsConnection!
     indexTerm(id: ID): IndexTerm!
   }
 
   type IndexTermsConnection {
-    cursor: String!
-    hasMore: Boolean!
-    list: [IndexTerm!]!
+    cursor: String
+    hasMore: Boolean
+    list: [IndexTerm!]
   }
 
   type TermReference {
-    id: ID!
-    title: String!
+    id: ID
+    title: String
   }
 
   type SpecialPage {
-    page: Int!
-    type: String!
+    page: Int
+    type: String
   }
 
   type Pages {
-    pageNumbers: [Int]!
-    specialPages: [SpecialPage!]!
+    pageNumbers: [Int!]
+    specialPages: [SpecialPage!]
   }
 
   type Association {
     type: String!
     quotation: String
-    terms: [TermReference!]!
+    terms: [TermReference!]
     pages: Pages
   }
 
   type TermInfo {
-    title: String!
+    title: String
     pronunciation: Pronunciation
-    associations: [Association!]!
-    usedThroughOut: Boolean!
+    associations: [Association!]
+    usedThroughOut: Boolean
   }
 
   type IndexGuideEditions {
@@ -60,21 +60,16 @@ export const indexTermsTypeDefs = gql`
     lang: String
   }
 
-  type OtherLang {
-    lang: String
-    spelling: String
-  }
-
   type Dictionary {
     description: String
-    subWords: [SubWord]!
-    otherLangs: [OtherLang!]!
+    subWords: [SubWord!]
+    otherLangs: [Pronunciation!]
   }
 
   type IndexGuide {
     parentTerm: ID
     editions: IndexGuideEditions!
-    inOtherLangs: [Pronunciation!]!
+    inOtherLangs: [Pronunciation!]
   }
 
   type IndexTerm {
@@ -87,7 +82,7 @@ export const indexTermsTypeDefs = gql`
 
 export const indexTermsResolvers = {
   Query: {
-    interTerms: async (_: any, { pageSize, after }: any, { dataSources: { databaseApi } }: any) => {
+    indexTerms: async (_: any, { pageSize, after }: any, { dataSources: { databaseApi } }: any) => {
       const allIndexTerms: Index.Term[] = await databaseApi.getAllIndexTerms();
 
       const paginableTerms = allIndexTerms.map(item => ({

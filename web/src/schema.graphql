@@ -35,20 +35,20 @@ directive @connection(
 type Association {
   type: String!
   quotation: String
-  terms: [TermReference!]!
+  terms: [TermReference!]
   pages: Pages
 }
 
 type Dictionary {
   description: String
-  subWords: [SubWord]!
-  otherLangs: [OtherLang!]!
+  subWords: [SubWord!]
+  otherLangs: [Pronunciation!]
 }
 
 type IndexGuide {
   parentTerm: ID
   editions: IndexGuideEditions!
-  inOtherLangs: [Pronunciation!]!
+  inOtherLangs: [Pronunciation!]
 }
 
 type IndexGuideEditions {
@@ -64,23 +64,18 @@ type IndexTerm {
 }
 
 type IndexTermsConnection {
-  cursor: String!
-  hasMore: Boolean!
-  list: [IndexTerm!]!
+  cursor: String
+  hasMore: Boolean
+  list: [IndexTerm!]
 }
 
 type Note {
   text: String
 }
 
-type OtherLang {
-  lang: String
-  spelling: String
-}
-
 type Pages {
-  pageNumbers: [Int]!
-  specialPages: [SpecialPage!]!
+  pageNumbers: [Int!]
+  specialPages: [SpecialPage!]
 }
 
 type Pronunciation {
@@ -94,13 +89,13 @@ type Query {
   _empty: String
   termNotes(pageSize: Int, after: String): TermNotesConnection!
   termNote(id: Int): TermNote!
-  interTerms(pageSize: Int, after: String): IndexTermsConnection!
+  indexTerms(pageSize: Int, after: String): IndexTermsConnection!
   indexTerm(id: ID): IndexTerm!
 }
 
 type SpecialPage {
-  page: Int!
-  type: String!
+  page: Int
+  type: String
 }
 
 type SubWord {
@@ -110,10 +105,10 @@ type SubWord {
 }
 
 type TermInfo {
-  title: String!
+  title: String
   pronunciation: Pronunciation
-  associations: [Association!]!
-  usedThroughOut: Boolean!
+  associations: [Association!]
+  usedThroughOut: Boolean
 }
 
 type TermNote {
@@ -132,8 +127,8 @@ type TermNotesConnection {
 }
 
 type TermReference {
-  id: ID!
-  title: String!
+  id: ID
+  title: String
 }
 
 type User {

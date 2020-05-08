@@ -1,9 +1,9 @@
-import { useQueryParam, NumberParam } from 'use-query-params';
+import { useQueryParam, StringParam } from 'use-query-params';
 
 export const useTermQueryParam = (): [
-  number,
-  (newValue: number, updateType?: 'replace' | 'replaceIn' | 'push' | 'pushIn') => void,
+  string,
+  (newValue: string, updateType?: 'replace' | 'replaceIn' | 'push' | 'pushIn') => void,
 ] => {
-  const [termId, setTermId] = useQueryParam('id', NumberParam);
+  const [termId, setTermId] = useQueryParam('id', StringParam);
   return [termId, setTermId];
 };

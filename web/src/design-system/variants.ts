@@ -28,13 +28,15 @@ export const variants = {
       },
     },
   },
-  Text: {
-    color: 'text.primary',
-    textAlign: 'left',
-    fontSize: 2,
-    fontWeight: 3,
-    fontFamily: 'regular',
-    lineHeight: 'solid',
-    letterSpacing: 'normal',
-  },
+  text: {
+    primary: {
+      color: 'text.primary'
+    },
+    secondary: {
+      color: 'text.secondary'
+    },
+    hint: {
+      color: 'text.hint'
+    }
+  }
 };
