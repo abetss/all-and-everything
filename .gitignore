@@ -6,3 +6,8 @@ dist
 .build
 .webpackCache
 .webpack
+
+# backend project
+backend/env
+*.pyc
+*.un~
