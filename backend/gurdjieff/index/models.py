@@ -1,4 +1,3 @@
-from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
 from preference.models import (AssociationType, Edition, Language,
@@ -15,6 +14,8 @@ class Pronunciation(models.Model):
         on_delete=models.PROTECT)
 
     phonetic = models.CharField(
+        null=True,
+        blank=True,
         max_length=1000)
 
     spelling = models.CharField(
@@ -43,6 +44,7 @@ class SubWord(models.Model):
 
     language = models.ForeignKey(
         Language,
+        on_delete=models.SET_NULL,
         null=True,
         blank=True)
 
@@ -77,7 +79,7 @@ class Term(models.Model):
 
     sub_words = models.ManyToManyField(
         SubWord,
-        on_delete=models.CASCADE,
+        blank=True,
         related_name='words')
 
     in_other_languages = models.ManyToManyField(
@@ -102,7 +104,7 @@ class SpecialPage(models.Model):
         blank=True)
 
     def __str__(self):
-        return self.page
+        return str(self.page)
 
 
 class Association(models.Model):
@@ -125,8 +127,9 @@ class Association(models.Model):
         Term,
         blank=True)
 
-    pages = ArrayField(
-        models.IntegerField(),
+    pages = models.CharField(
+        max_length=2000,
+        null=True,
         blank=True)
 
     special_pages = models.ManyToManyField(
@@ -134,7 +137,12 @@ class Association(models.Model):
         blank=True)
 
     def __str__(self):
-        return self.type
+        if self.terms.all().count() > 0 or len(self.pages) == 0:
+            return '{}({})'.format(','.join(list(self.terms.all().values_list('title', flat=True))), self.type.name)
+        elif self.pages and len(self.pages) > 0:
+            return '{}({})'.format(self.pages, self.type.name)
+        else:
+            return '({})'.format(self.type.name)
 
 
 class Definition(models.Model):
@@ -149,7 +157,7 @@ class Definition(models.Model):
 
     edition = models.ForeignKey(
         Edition,
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         related_name='definitions')
 
     title = models.CharField(
@@ -160,6 +168,7 @@ class Definition(models.Model):
 
     pronunciation = models.ForeignKey(
         Pronunciation,
+        on_delete=models.SET_NULL,
         null=True,
         blank=True)
 

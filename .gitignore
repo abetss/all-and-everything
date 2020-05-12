@@ -11,3 +11,5 @@ dist
 backend/env
 *.pyc
 *.un~
+*.sw?
+db.sqlite3
