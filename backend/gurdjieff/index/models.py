@@ -1,180 +1,198 @@
 from django.db import models
 
-from preference.models import (AssociationType, Edition, Language,
-                               SpecialPageType)
+from book.models import Page, Term
+from preference.models import Language
+
+
+class IndexTerm(models.Model):
+    """
+    Terms of index and guide
+    """
+
+    term = models.ForeignKey(
+        Term,
+        on_delete=models.PROTECT,
+        related_name='index_terms')
+
+    page = models.ManyToManyField(
+        Page,
+        through='TermPageRelation',
+        blank=True)
+
+    term = models.ManyToManyField(
+        'self',
+        through='TermTermRelation',
+        blank=True)
+
+    used_throughout = models.BooleanField(
+        default=False)
+
+
+class Reference(models.Model):
+    """
+    References of the term in the pages
+    """
+
+    term = models.ForeignKey(
+        IndexTerm,
+        on_delete=models.CASCADE,
+        related_name='references')
+
+    text = models.TextField()
+
+    page = models.ManyToManyField(
+        Page,
+        through='ReferencePageRelation',
+        through_fields=('reference', 'page'))
+
+    related_term = models.ManyToManyField(
+        IndexTerm,
+        through='ReferenceTermRelation',
+        blank=True)
+
+    source = models.CharField(
+        max_length=1000,
+        null=True,
+        blank=True)
 
 
 class Pronunciation(models.Model):
     """
-    Pronunciation of a term
+    Pronunciation of the term
     """
+
+    term = models.ForeignKey(
+        IndexTerm,
+        related_name='pronunciations',
+        on_delete=models.CASCADE)
 
     language = models.ForeignKey(
         Language,
         on_delete=models.PROTECT)
 
-    phonetic = models.CharField(
-        null=True,
-        blank=True,
-        max_length=1000)
-
-    spelling = models.CharField(
-        max_length=1000,
+    note = models.TextField(
         null=True,
         blank=True)
 
-    sound = models.FileField(
-        blank=True,
-        null=True)
 
-    def __str__(self):
-        return '{}({})'.format(self.phonetic, self.language)
-
-
-# Dictionary Related
-class SubWord(models.Model):
+class ReferencePageRelation(models.Model):
     """
-    Sub-words for dictuinary
+    Reference Page relationship information
     """
 
-    word = models.CharField(
-        max_length=1000)
+    REFERENCE_PAGE_RELATION_CHOICES = (
+        ('ref', 'Reference'),
+        ('and', 'And')
+    )
 
-    description = models.TextField()
+    PAGE_CONTINUATION_CHOICES = (
+        ('f', 'next page'),
+        ('ff', 'following pages'),
+        ('in', 'inset'),
+    )
 
-    language = models.ForeignKey(
-        Language,
+    reference = models.ForeignKey(
+        Reference,
+        on_delete=models.CASCADE)
+
+    page = models.ForeignKey(
+        Page,
+        on_delete=models.CASCADE,
+        related_name='references')
+
+    type = models.CharField(
+        max_length=3,
+        choices=REFERENCE_PAGE_RELATION_CHOICES)
+
+    continuation = models.CharField(
+        max_length=2,
+        choices=PAGE_CONTINUATION_CHOICES,
+        blank=True)
+
+    # For passim range indicates the end of page range
+    passim = models.ForeignKey(
+        Page,
         on_delete=models.SET_NULL,
         null=True,
         blank=True)
 
-    def __str__(self):
-        return self.word
 
-
-class Term(models.Model):
+class ReferenceTermRelation(models.Model):
     """
-    Terms for index
+    Reference Term relation
     """
 
-    title = models.CharField(
-        max_length=1000)
+    REFERENCE_TERM_RELATION_CHOICES = (
+        ('cnc', 'Concerning'),
+        ('cns', 'Consider Also'),
+    )
 
-    # Index Guide definition
-    parent_term = models.ForeignKey(
-        'self',
-        on_delete=models.SET_NULL,
-        related_name='children_terms',
+    reference = models.ForeignKey(
+        Reference,
+        on_delete=models.CASCADE)
+
+    term = models.ForeignKey(
+        IndexTerm,
+        on_delete=models.CASCADE)
+
+    type = models.CharField(
+        max_length=3,
+        choices=REFERENCE_TERM_RELATION_CHOICES)
+
+    page = models.ManyToManyField(
+        Page,
+        blank=True)
+
+    # Used in Consider Also
+    context = models.TextField(
         null=True,
-        blank=True)
-
-    in_other_languages = models.ManyToManyField(
-        Pronunciation,
-        blank=True)
-
-    # Dictionary definition
-    description = models.TextField(
-        null=True,
-        blank=True)
-
-    sub_words = models.ManyToManyField(
-        SubWord,
-        blank=True,
-        related_name='words')
-
-    in_other_languages = models.ManyToManyField(
-        Pronunciation,
         blank=True)
 
     def __str__(self):
         return self.title
 
 
-class SpecialPage(models.Model):
+class TermPageRelation(models.Model):
     """
-    Special Page model
-    """
-
-    page = models.IntegerField()
-
-    type = models.ForeignKey(
-        SpecialPageType,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True)
-
-    def __str__(self):
-        return str(self.page)
-
-
-class Association(models.Model):
-    """
-    Associations of definitions
-    TODO: Not sure yet, and Special Pages remained
-    """
-
-    type = models.ForeignKey(
-        AssociationType,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True)
-
-    quotation = models.TextField(
-        null=True,
-        blank=True)
-
-    terms = models.ManyToManyField(
-        Term,
-        blank=True)
-
-    pages = models.CharField(
-        max_length=2000,
-        null=True,
-        blank=True)
-
-    special_pages = models.ManyToManyField(
-        SpecialPage,
-        blank=True)
-
-    def __str__(self):
-        if self.terms.all().count() > 0 or len(self.pages) == 0:
-            return '{}({})'.format(','.join(list(self.terms.all().values_list('title', flat=True))), self.type.name)
-        elif self.pages and len(self.pages) > 0:
-            return '{}({})'.format(self.pages, self.type.name)
-        else:
-            return '({})'.format(self.type.name)
-
-
-class Definition(models.Model):
-    """
-    Definitions of a term
+    Term Page relationship information
     """
 
     term = models.ForeignKey(
-        Term,
-        on_delete=models.PROTECT,
-        related_name='definitions')
+        IndexTerm,
+        on_delete=models.CASCADE)
 
-    edition = models.ForeignKey(
-        Edition,
-        on_delete=models.CASCADE,
-        related_name='definitions')
+    page = models.ForeignKey(
+        Page,
+        on_delete=models.CASCADE)
 
-    title = models.CharField(
-        max_length=1000)
-
-    used_through_out = models.BooleanField(
-        default=False)
-
-    pronunciation = models.ForeignKey(
-        Pronunciation,
-        on_delete=models.SET_NULL,
+    # Used for used relationship
+    context = models.TextField(
         null=True,
         blank=True)
 
-    association = models.ManyToManyField(
-        Association,
-        blank=True)
 
-    def _str__(self):
-        return '{}({})'.format(self.term, self.edition.name)
+class TermTermRelation(models.Model):
+    """
+    Term Term relationship information
+    """
+
+    TERM_TERM_RELATION_CHOICES = (
+        ('sme', 'Same term'),
+        ('sub', 'Subterm'),
+        ('cns', 'Consider Also'),
+        ('see', 'See'),
+        ('sal', 'See Also')
+    )
+
+    term = models.ForeignKey(
+        IndexTerm,
+        on_delete=models.CASCADE,
+        related_name='term_relations')
+
+    other_term = models.ForeignKey(
+        IndexTerm,
+        on_delete=models.CASCADE)
+
+    type = models.CharField(
+        max_length=3,
+        choices=TERM_TERM_RELATION_CHOICES)

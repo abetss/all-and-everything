@@ -1,33 +1,28 @@
 from django.contrib import admin
 
-from .models import (
-    Pronunciation,
-    SubWord,
-    Term,
-    SpecialPage,
-    Association,
-    Definition)
+from .models import IndexTerm, Pronunciation, Reference
 
 
-class DefinitionInlineAdmin(admin.StackedInline):
+class PronunciationInlineAdmin(admin.StackedInline):
 
-    model = Definition
+    model = Pronunciation
+    extra = 1
+
+
+class ReferenceInlineAdmin(admin.StackedInline):
+
+    model = Reference
     extra = 2
 
 
-class TermAdmin(admin.ModelAdmin):
+class IndexTermAdmin(admin.ModelAdmin):
 
-    model = Term
+    model = IndexTerm
 
     inlines = (
-        DefinitionInlineAdmin,
+        ReferenceInlineAdmin,
+        PronunciationInlineAdmin
     )
 
 
-admin.site.register(Pronunciation)
-admin.site.register(SubWord)
-admin.site.register(Term, TermAdmin)
-admin.site.register(SpecialPage)
-admin.site.register(Association)
-admin.site.register(Definition)
-
+admin.site.register(IndexTerm, IndexTermAdmin)

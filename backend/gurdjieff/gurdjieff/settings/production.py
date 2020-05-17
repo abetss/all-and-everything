@@ -1,5 +1,6 @@
 import os
-from .base import *
+
+from .base import *  # noqa
 
 # Environment variables
 DB_USER = os.environ.get('DATABASE_USER')
@@ -12,7 +13,7 @@ DB_PORT = os.environ.get('DATABASE_PORT')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False`
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -29,6 +30,3 @@ DATABASES = {
         'PORT': DB_PORT
     }
 }
-
-
-
