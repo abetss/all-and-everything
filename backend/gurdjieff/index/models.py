@@ -19,13 +19,21 @@ class IndexTerm(models.Model):
         through='TermPageRelation',
         blank=True)
 
-    term = models.ManyToManyField(
+    related_term = models.ManyToManyField(
         'self',
         through='TermTermRelation',
         blank=True)
 
     used_throughout = models.BooleanField(
         default=False)
+
+    def __str__(self):
+        return '{term}'.format(
+            term = self.term.title
+        )
+
+    class Meta:
+        ordering = ('term__title',)
 
 
 class Reference(models.Model):
@@ -37,6 +45,8 @@ class Reference(models.Model):
         IndexTerm,
         on_delete=models.CASCADE,
         related_name='references')
+
+    order = models.IntegerField()
 
     text = models.TextField()
 
@@ -54,6 +64,15 @@ class Reference(models.Model):
         max_length=1000,
         null=True,
         blank=True)
+
+    def __str__(self):
+        return '{order}. {term}'.format(
+            order = self.order,
+            term = self.term.term.title
+        )
+
+    class Meta:
+        ordering = ('term__term__title', 'order')
 
 
 class Pronunciation(models.Model):
@@ -74,6 +93,12 @@ class Pronunciation(models.Model):
         null=True,
         blank=True)
 
+    def __str__(self):
+        return '{term} in {lang}'.format(
+            term = self.term.term.title,
+            lang = self.language.code
+        )
+
 
 class ReferencePageRelation(models.Model):
     """
@@ -82,7 +107,8 @@ class ReferencePageRelation(models.Model):
 
     REFERENCE_PAGE_RELATION_CHOICES = (
         ('ref', 'Reference'),
-        ('and', 'And')
+        ('and', 'And'),
+        ('cnc', 'Concerning')
     )
 
     PAGE_CONTINUATION_CHOICES = (
@@ -149,7 +175,7 @@ class ReferenceTermRelation(models.Model):
         blank=True)
 
     def __str__(self):
-        return self.title
+        return self.term.term.title
 
 
 class TermPageRelation(models.Model):
@@ -189,7 +215,7 @@ class TermTermRelation(models.Model):
         on_delete=models.CASCADE,
         related_name='term_relations')
 
-    other_term = models.ForeignKey(
+    related_term = models.ForeignKey(
         IndexTerm,
         on_delete=models.CASCADE)
 

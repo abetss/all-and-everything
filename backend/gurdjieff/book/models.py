@@ -8,10 +8,21 @@ class Chapter(models.Model):
     Chapters of the book
     """
 
-    number = models.IntegerField()
+    number = models.IntegerField(
+        unique=True
+    )
 
     name = models.CharField(
         max_length=1000)
+
+    def __str__(self):
+        return '{chapter} - {name}'.format(
+            chapter = self.number,
+            name = self.name
+        )
+
+    class Meta:
+        ordering = ('number',)
 
 
 class Page(models.Model):
@@ -32,6 +43,13 @@ class Page(models.Model):
         Chapter,
         on_delete=models.PROTECT)
 
+    def __str__(self):
+        return '{page} of {chapter} ({edition})'.format(
+            page = self.number,
+            chapter = self.chapter.number,
+            edition = self.edition.name
+        )
+
 
 class Term(models.Model):
     """
@@ -43,8 +61,14 @@ class Term(models.Model):
 
     # Original in russian
     original = models.CharField(
-        max_length=1000)
+        max_length=1000,
+        null=True,
+        blank=True)
 
-    page = models.ForeignKey(
-        Page,
-        on_delete=models.PROTECT)
+    page = models.ManyToManyField(
+        Page)
+
+    def __str__(self):
+        return '{term}'.format(
+            term = self.title
+        )

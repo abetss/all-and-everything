@@ -1,0 +1,386 @@
+[
+{
+    "model": "book.chapter",
+    "pk": 1,
+    "fields": {
+        "number": 1,
+        "name": "The arousing of thought"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 2,
+    "fields": {
+        "number": 2,
+        "name": "Introduction: Why Beelzebub was in our solar system"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 3,
+    "fields": {
+        "number": 3,
+        "name": "The cause of the delay in the falling of the ship Karnak"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 4,
+    "fields": {
+        "number": 4,
+        "name": "The law of falling"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 5,
+    "fields": {
+        "number": 5,
+        "name": "The system of Archangel Hariton"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 6,
+    "fields": {
+        "number": 6,
+        "name": "Perpetual motion"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 7,
+    "fields": {
+        "number": 7,
+        "name": "Becoming aware of genuine being-duty"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 8,
+    "fields": {
+        "number": 8,
+        "name": "The impudent brat Hassein, Beelzebub\u2019s grandson, dares to call men \"slugs\""
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 9,
+    "fields": {
+        "number": 9,
+        "name": "The cause of the genesis of the Moon"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 10,
+    "fields": {
+        "number": 10,
+        "name": "Why \"men\" are not men"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 11,
+    "fields": {
+        "number": 11,
+        "name": "A piquant trait of the peculiar psyche of contemporary man"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 12,
+    "fields": {
+        "number": 12,
+        "name": "The first \"growl\""
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 13,
+    "fields": {
+        "number": 13,
+        "name": "Why in man\u2019s reason fantasy may be perceived as reality"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 14,
+    "fields": {
+        "number": 14,
+        "name": "The beginnings of perspectives promising nothing very cheerful"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 15,
+    "fields": {
+        "number": 15,
+        "name": "The first decent of Beelzebub upon the planet Earth"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 16,
+    "fields": {
+        "number": 16,
+        "name": "The relative understanding of Time"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 17,
+    "fields": {
+        "number": 17,
+        "name": "The Arch-absurd: According to the assertion of Beelzebub, our Sun neither lights or heats"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 18,
+    "fields": {
+        "number": 18,
+        "name": "The Arch-preposterous"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 19,
+    "fields": {
+        "number": 19,
+        "name": "Beelzebub\u2019s tales about his second descent on to the planet Earth"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 20,
+    "fields": {
+        "number": 20,
+        "name": "The third flight of Beelzebub to the planet Earth"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 21,
+    "fields": {
+        "number": 21,
+        "name": "The first visit of Beelzebub to India"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 22,
+    "fields": {
+        "number": 22,
+        "name": "Beelzebub for the first time in Tibet"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 23,
+    "fields": {
+        "number": 23,
+        "name": "The fourth personal sojourn of Beelzebub on the planet Earth"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 24,
+    "fields": {
+        "number": 24,
+        "name": "Beelzebub\u2019s flight to the planet Earth for the fifth time"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 25,
+    "fields": {
+        "number": 25,
+        "name": "The Very Saintly Ashiata Shiemash, sent from Above to the Earth"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 26,
+    "fields": {
+        "number": 26,
+        "name": "The Legominism concerning the deliberations of the Very Saintly Ashiata Shiemash under the title of \"The Terror of the Situation\""
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 27,
+    "fields": {
+        "number": 27,
+        "name": "The organization for man\u2019s existence created by the Very Saintly Ashiata Shiemash"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 28,
+    "fields": {
+        "number": 28,
+        "name": "The chief culprit in the destruction of all the Very Saintly Labors of Ashiata Shiemash"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 29,
+    "fields": {
+        "number": 29,
+        "name": "The fruits of former civilizations and the blossoms of the contemporary"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 30,
+    "fields": {
+        "number": 30,
+        "name": "Art"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 31,
+    "fields": {
+        "number": 31,
+        "name": "The sixth and last sojourn of Beelzebub on the planet Earth"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 32,
+    "fields": {
+        "number": 32,
+        "name": "Hypnotism"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 33,
+    "fields": {
+        "number": 33,
+        "name": "Beelzebub as professional hypnotist"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 34,
+    "fields": {
+        "number": 34,
+        "name": "Russia"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 35,
+    "fields": {
+        "number": 35,
+        "name": "A change in the appointed course of the falling of the transspace ship Karnak"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 36,
+    "fields": {
+        "number": 36,
+        "name": "Just a wee bit more about the Germans"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 37,
+    "fields": {
+        "number": 37,
+        "name": "France"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 38,
+    "fields": {
+        "number": 38,
+        "name": "Religion"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 39,
+    "fields": {
+        "number": 39,
+        "name": "The Holy Planet \"Purgatory\""
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 40,
+    "fields": {
+        "number": 40,
+        "name": "Beelzebub tells how people learned and again forgot about the fundamental cosmic law of Heptaparaparshinokh"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 41,
+    "fields": {
+        "number": 41,
+        "name": "The Bokharian dervish Hadji-Asvatz-Troov"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 42,
+    "fields": {
+        "number": 42,
+        "name": "Beelzebub in America"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 43,
+    "fields": {
+        "number": 43,
+        "name": "Beelzebub\u2019s survey of the process of the periodic reciprocal destruction of men, or Beelzebub\u2019s opinion of war"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 44,
+    "fields": {
+        "number": 44,
+        "name": "In the opinion of Beelzebub, man\u2019s understanding of justice is for him in the objective sense an accursed mirage"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 45,
+    "fields": {
+        "number": 45,
+        "name": "In the opinion of Beelzebub, man\u2019s extraction of electricity from Nature and its destruction during its use, is one of the chief causes of the shortening of the life of man"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 46,
+    "fields": {
+        "number": 46,
+        "name": "Beelzebub explains to his grandson the significance of the form and sequence which he chose for expounding the information concerning man"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 47,
+    "fields": {
+        "number": 47,
+        "name": "The inevitable result of impartial mentation"
+    }
+},
+{
+    "model": "book.chapter",
+    "pk": 48,
+    "fields": {
+        "number": 48,
+        "name": "From the author"
+    }
+}
+]
