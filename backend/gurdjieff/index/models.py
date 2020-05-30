@@ -22,6 +22,7 @@ class IndexTerm(models.Model):
     related_term = models.ManyToManyField(
         'self',
         through='TermTermRelation',
+        symmetrical=False,
         blank=True)
 
     used_throughout = models.BooleanField(
