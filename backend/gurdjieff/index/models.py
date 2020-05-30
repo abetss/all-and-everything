@@ -191,7 +191,7 @@ class TermPageRelation(models.Model):
         Page,
         on_delete=models.CASCADE)
 
-    # Used for used relationship
+    # Used for used relationship and used throughout as ...
     context = models.TextField(
         null=True,
         blank=True)
